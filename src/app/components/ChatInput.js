@@ -14,7 +14,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full">
+    <form onSubmit={handleSubmit} className="flex w-full px-1">
       <input
         type="text"
         value={message}
