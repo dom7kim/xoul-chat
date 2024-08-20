@@ -70,39 +70,39 @@ export default function ChatRoom({ questionData }) {
     <div className={`w-full h-[calc(100vh-100px)] flex flex-col ${
       darkMode ? 'bg-gray-800' : 'bg-gray-50'
     } rounded-lg overflow-hidden shadow-lg`}>
-      <div className={`p-4 ${
+      <div className={`p-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-b`}>
-        <div className="flex justify-end items-center mb-4">
+        <div className="flex justify-between items-center mb-2">
+          <select 
+            value={selectedSession} 
+            onChange={handleSessionChange} 
+            className={`w-3/4 p-1 text-sm border rounded shadow-sm focus:ring ${
+              darkMode 
+                ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
+                : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
+            }`}
+          >
+            <option value="">Select a session</option>
+            {Object.keys(questionData).map(session => (
+              <option key={session} value={session}>{session}</option>
+            ))}
+          </select>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className={`px-3 py-1 rounded ${
+            className={`px-2 py-1 text-sm rounded ${
               darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
             } hover:bg-opacity-80 transition-colors`}
           >
-            {darkMode ? '☀️ Light' : '🌙 Dark'}
+            {darkMode ? 'Light ☀️' : 'Dark 🌙'}
           </button>
         </div>
-        <select 
-          value={selectedSession} 
-          onChange={handleSessionChange} 
-          className={`w-full mb-2 p-2 border rounded shadow-sm focus:ring ${
-            darkMode 
-              ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
-              : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-          }`}
-        >
-          <option value="">Select a session</option>
-          {Object.keys(questionData).map(session => (
-            <option key={session} value={session}>{session}</option>
-          ))}
-        </select>
         {selectedSession && (
           <div className="relative">
             <select 
               value={selectedQuestion} 
               onChange={handleQuestionChange} 
-              className={`w-full p-2 border rounded shadow-sm focus:ring appearance-none ${
+              className={`w-full p-1 text-sm border rounded shadow-sm focus:ring appearance-none ${
                 darkMode 
                   ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
                   : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
@@ -126,12 +126,12 @@ export default function ChatRoom({ questionData }) {
       <div className="flex-grow overflow-hidden">
         <ChatMessages messages={messages} darkMode={darkMode} />
       </div>
-      <div className={`p-4 ${
+      <div className={`p-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-t`}>
         <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} />
       </div>
-      <div className={`text-center py-2 text-sm ${
+      <div className={`text-center py-1 text-xs ${
         darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'
       }`}>
         © {new Date().getFullYear()} Dongwon at Xoul. All rights reserved.

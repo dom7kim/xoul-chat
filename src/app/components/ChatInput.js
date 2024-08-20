@@ -19,7 +19,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className={`flex-grow px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 ${
+        className={`flex-grow px-2 py-1 text-sm border rounded-l-md focus:outline-none focus:ring-2 ${
           darkMode
             ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
             : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
@@ -29,7 +29,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode }) {
       />
       <button
         type="submit"
-        className={`px-6 py-2 rounded-r-md focus:outline-none focus:ring-2 transition-colors ${
+        className={`px-3 py-1 text-sm rounded-r-md focus:outline-none focus:ring-2 transition-colors ${
           isDisabled
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
             : darkMode
