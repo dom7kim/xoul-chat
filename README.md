@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Xoul Chat
+
+Xoul Chat is an interactive English tutoring application that helps users practice natural daily conversations in English. It provides a user-friendly interface for engaging in topic-based discussions with an AI tutor.
+
+## Features
+
+- Session-based conversations with predefined topics
+- Dark mode and light mode for comfortable reading in any environment
+- Real-time AI responses for interactive learning
+- Automatic scrolling for smooth conversation flow
+- Mobile-responsive design
+
+## Technology Stack
+
+- Next.js 14
+- React
+- Tailwind CSS
+- Groq AI API for natural language processing
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/xoul-chat.git
+   cd xoul-chat
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add your Groq API key:
+   ```
+   GROQ_API_KEY=your_api_key_here
+   ```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+4. Run the development server:
+   ```
+   npm run dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Select a session from the dropdown menu.
+2. Choose a specific question to start the conversation.
+3. Type your responses in the chat input and press 'Send' or hit Enter.
+4. The AI tutor will provide feedback and continue the conversation.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## About
+
+Xoul Chat is developed by Dongwon at Xoul. For more information, please visit [xoul.com](https://xoul.com).
