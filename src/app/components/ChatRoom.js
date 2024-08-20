@@ -70,14 +70,14 @@ export default function ChatRoom({ questionData }) {
     <div className={`w-full h-[calc(100vh-100px)] flex flex-col ${
       darkMode ? 'bg-gray-800' : 'bg-gray-50'
     } rounded-lg overflow-hidden shadow-lg`}>
-      <div className={`p-2 ${
+      <div className={`px-1 py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-b`}>
         <div className="flex justify-between items-center mb-2">
           <select 
             value={selectedSession} 
             onChange={handleSessionChange} 
-            className={`w-3/4 p-1 text-sm border rounded shadow-sm focus:ring ${
+            className={`w-4/5 p-1 text-sm border rounded shadow-sm focus:ring ${
               darkMode 
                 ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
                 : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
@@ -126,7 +126,7 @@ export default function ChatRoom({ questionData }) {
       <div className="flex-grow overflow-hidden">
         <ChatMessages messages={messages} darkMode={darkMode} />
       </div>
-      <div className={`p-2 ${
+      <div className={`px-1 py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-t`}>
         <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} />
