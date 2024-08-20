@@ -123,15 +123,15 @@ export default function ChatRoom({ questionData }) {
           </div>
         )}
       </div>
-      <div className="flex-grow overflow-hidden -mx-1">
+      <div className="flex-grow overflow-hidden">
         <ChatMessages messages={messages} darkMode={darkMode} />
       </div>
-      <div className={`py-2 -mx-1 ${
+      <div className={`py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-t`}>
         <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} />
       </div>
-      <div className={`text-center py-1 text-xs -mx-1 ${
+      <div className={`text-center py-1 text-xs ${
         darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'
       }`}>
         © {new Date().getFullYear()} Dongwon at Xoul. All rights reserved.
