@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 
@@ -9,6 +9,23 @@ export default function ChatRoom({ questionData }) {
   const [selectedSession, setSelectedSession] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState('');
   const [darkMode, setDarkMode] = useState(false);
+  const chatContainerRef = useRef(null);
+
+  useEffect(() => {
+    const adjustChatContainerHeight = () => {
+      if (chatContainerRef.current) {
+        const viewportHeight = window.innerHeight;
+        const chatTop = chatContainerRef.current.offsetTop;
+        const newHeight = viewportHeight - chatTop - 10; // 10px buffer
+        chatContainerRef.current.style.height = `${newHeight}px`;
+      }
+    };
+
+    adjustChatContainerHeight();
+    window.addEventListener('resize', adjustChatContainerHeight);
+
+    return () => window.removeEventListener('resize', adjustChatContainerHeight);
+  }, []);
 
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
@@ -67,17 +84,17 @@ export default function ChatRoom({ questionData }) {
   };
 
   return (
-    <div className={`w-full h-screen flex flex-col ${
-      darkMode ? 'bg-gray-800' : 'bg-gray-50'
-    }`}>
-      <div className={`py-2 ${
+    <div className={`w-full flex flex-col ${
+      darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
+    } rounded-lg overflow-hidden shadow-lg`}>
+      <div className={`px-1 py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-b`}>
-        <div className="flex justify-between items-center mb-2 px-1">
+        <div className="flex justify-between items-center mb-2">
           <select 
             value={selectedSession} 
             onChange={handleSessionChange} 
-            className={`w-[85%] p-1 text-sm border rounded shadow-sm focus:ring ${
+            className={`w-4/5 p-1 text-sm border rounded shadow-sm focus:ring ${
               darkMode 
                 ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
                 : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
@@ -90,7 +107,7 @@ export default function ChatRoom({ questionData }) {
           </select>
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className={`px-3 py-1 text-sm rounded ${
+            className={`px-2 py-1 text-sm rounded ${
               darkMode ? 'bg-gray-600 text-white' : 'bg-gray-500 text-gray-800'
             } hover:bg-opacity-80 transition-colors`}
           >
@@ -98,7 +115,7 @@ export default function ChatRoom({ questionData }) {
           </button>
         </div>
         {selectedSession && (
-          <div className="relative px-1">
+          <div className="relative">
             <select 
               value={selectedQuestion} 
               onChange={handleQuestionChange} 
@@ -113,7 +130,7 @@ export default function ChatRoom({ questionData }) {
                 <option key={index} value={question}>{question}</option>
               ))}
             </select>
-            <div className={`pointer-events-none absolute inset-y-0 right-1 flex items-center ${
+            <div className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 ${
               darkMode ? 'text-white' : 'text-gray-700'
             }`}>
               <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -123,13 +140,15 @@ export default function ChatRoom({ questionData }) {
           </div>
         )}
       </div>
-      <div className="flex-grow overflow-hidden">
-        <ChatMessages messages={messages} darkMode={darkMode} />
-      </div>
-      <div className={`py-2 ${
-        darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
-      } border-t`}>
-        <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} />
+      <div ref={chatContainerRef} className="flex flex-col flex-grow overflow-hidden">
+        <div className="flex-grow overflow-y-auto">
+          <ChatMessages messages={messages} darkMode={darkMode} />
+        </div>
+        <div className={`px-1 py-2 ${
+          darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
+        } border-t`}>
+          <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} />
+        </div>
       </div>
       <div className={`text-center py-1 text-xs ${
         darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'
