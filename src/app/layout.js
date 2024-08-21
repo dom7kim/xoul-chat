@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen flex flex-col">
           {children}
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
