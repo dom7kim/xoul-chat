@@ -10,6 +10,7 @@ export default function ChatRoom({ questionData }) {
   const [selectedQuestion, setSelectedQuestion] = useState('');
   const [darkMode, setDarkMode] = useState(false);
   const [largeFont, setLargeFont] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
@@ -79,6 +80,7 @@ export default function ChatRoom({ questionData }) {
   const handleSendMessage = async (text) => {
     const newUserMessage = { role: 'user', content: text };
     setMessages(prevMessages => [...prevMessages, newUserMessage]);
+    setIsTyping(true);
 
     try {
       const response = await fetch('/api/chat', {
@@ -91,12 +93,18 @@ export default function ChatRoom({ questionData }) {
       });
       const data = await response.json();
       if (response.ok) {
-        setMessages(prevMessages => [...prevMessages, { role: 'assistant', content: data.response }]);
+        // Simulate a delay before showing the AI's response
+        setTimeout(() => {
+          setIsTyping(false);
+          setMessages(prevMessages => [...prevMessages, { role: 'assistant', content: data.response }]);
+        }, 300 + Math.random() * 200); // Random delay between 300-500 milliseconds. 1000 + Math.random() * 1000 for random delay between 1-2 seconds.
       } else {
         console.error('Failed to get response:', data.error);
+        setIsTyping(false);
       }
     } catch (error) {
       console.error('Error sending message:', error);
+      setIsTyping(false);
     }
   };
 
@@ -175,12 +183,12 @@ export default function ChatRoom({ questionData }) {
       </div>
       <div ref={chatContainerRef} className="flex flex-col flex-grow overflow-hidden">
         <div className="flex-grow overflow-y-auto">
-          <ChatMessages messages={messages} darkMode={darkMode} largeFont={largeFont} />
+          <ChatMessages messages={messages} darkMode={darkMode} largeFont={largeFont} isTyping={isTyping} />
         </div>
         <div className={`px-1 py-2 ${
           darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
         } border-t`}>
-          <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion} darkMode={darkMode} largeFont={largeFont} />
+          <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion || isTyping} darkMode={darkMode} largeFont={largeFont} />
         </div>
       </div>
       <div className={`text-center py-1 ${largeFont ? 'text-sm' : 'text-xs'} ${

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export default function ChatMessages({ messages, darkMode, largeFont }) {
+export default function ChatMessages({ messages, darkMode, largeFont, isTyping }) {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -11,7 +11,7 @@ export default function ChatMessages({ messages, darkMode, largeFont }) {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, isTyping]);
 
   return (
     <div className={`space-y-2 overflow-y-auto max-h-full px-1 py-2 ${largeFont ? 'text-lg' : 'text-base'}`}>
@@ -40,6 +40,22 @@ export default function ChatMessages({ messages, darkMode, largeFont }) {
             </p>
           </div>
         ))
+      )}
+      {isTyping && (
+        <div className={`p-2 rounded-lg ${
+          darkMode ? 'bg-gray-700' : 'bg-gray-100'
+        } max-w-[90%] shadow`}>
+          <p className={`font-bold ${
+            darkMode ? 'text-green-300' : 'text-green-700'
+          }`}>
+            AI:
+          </p>
+          <div className="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
       )}
       <div ref={messagesEndRef} />
     </div>
