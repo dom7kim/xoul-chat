@@ -48,7 +48,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
           <p className={`font-bold ${
             darkMode ? 'text-green-300' : 'text-green-700'
           }`}>
-            AI:
+            Stephanie:
           </p>
           <div className="typing-indicator">
             <span></span>
