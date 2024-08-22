@@ -146,7 +146,7 @@ export default function ChatRoom({ questionData }) {
           <select 
             value={selectedSession} 
             onChange={handleSessionChange} 
-            className={`w-1/2 p-1 text-sm border rounded shadow-sm focus:ring ${
+            className={`w-3/5 p-1 text-sm border rounded shadow-sm focus:ring ${
               darkMode 
                 ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
                 : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
