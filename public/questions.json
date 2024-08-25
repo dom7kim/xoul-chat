@@ -1,5 +1,5 @@
 {
-  "1: Farewell / Letting Go 👋": {
+  "Sat. 1: Farewell / Letting Go 👋": {
     "questions": [
       "Have you ever had to say goodbye to something or someone important in your life? How did you cope with it?",
       "What are some things or people that were hardest for you to let go of? Why were they so significant to you?",
@@ -13,7 +13,7 @@
       "How do you find closure after saying goodbye? What helps you move forward?"
     ]
   },
-  "2: Crushes 💕": {
+  "Sat. 2: Crushes 💕": {
     "questions": [
       "Do you remember your first crush? What was it like, and how did you handle those feelings?",
       "What typically causes you to develop a crush on someone? Is it their personality, looks, or something else?",
@@ -27,7 +27,7 @@
       "How do you handle the emotions of a crush that doesn’t work out? Do you have any strategies for moving on?"
     ]
   },
-  "3: Increasing Trend of 'Reverse Migration' 🌍": {
+  "Sat. 3: Increasing Trend of 'Reverse Migration' 🌍": {
     "questions": [
       "What are some reasons people choose to migrate to other countries? Have you ever considered moving abroad yourself?",
       "Have you noticed any trends of people moving back to Korea after living abroad? What do you think drives this decision?",
@@ -39,6 +39,34 @@
       "What challenges do you think people face when they move back to Korea after years of living abroad? How can they overcome these challenges?",
       "How do you view the government's policies on dual nationality and pensions for returnees? Do you think they are fair and effective?",
       "Do you think reverse migration is a growing trend that will continue in the future? Why or why not?"
+    ]
+  },
+  "Thu. 1: First Impression 👥": {
+    "questions": [
+      "What kind of first impression do you think you leave on others? How do you feel about it?",
+      "What kind of first impression do others tell you that you have? Is it different from what you expected?",
+      "Feel free to take turns sharing your first impressions of each other. Then, share whether or not you think these impressions are accurate.",
+      "How important is making a first impression? What kind of lasting effects can a first impression have?",
+      "It's widely known that your first impression of someone is determined within the first few seconds of meeting them. How do you feel about this idea?",
+      "What factors do you think play the largest role in forming someone's first impression of you?",
+      "How accurate do you think your first impression of someone usually is? Have you ever been surprised by how someone turned out?",
+      "Have there been instances in which someone's first impression was completely different from who they were after you got to know them?",
+      "How do you approach making a good first impression in professional settings compared to social ones?",
+      "Share a memorable first impression story. What made it stand out to you, and did your impression change over time?"
+    ]
+  },
+  "Thu. 2: Career Change 🔄": {
+    "questions": [
+      "Have you ever considered changing your career? What factors led you to think about it?",
+      "What are the biggest challenges you think people face when changing careers, and how can they overcome them?",
+      "How important is job satisfaction to you compared to other factors like salary, job security, and work-life balance?",
+      "What skills do you think are most transferable between different careers? How can you highlight these skills during a career change?",
+      "How can someone start preparing for a career change while still working in their current job? What practical steps can they take?",
+      "Do you think age should be a significant factor when considering a career change? Why or why not?",
+      "What role do education and training play in making a successful career change? Are there any alternatives to formal education that can be equally effective?",
+      "How do you think your personality and personal interests affect your adaptability and success in a new career?",
+      "Can you share a story about someone you know who successfully changed careers? What lessons or insights can we draw from their experience?",
+      "How do you weigh the risks and rewards when deciding to change careers? What factors help you make the final decision?"
     ]
   }
 }
