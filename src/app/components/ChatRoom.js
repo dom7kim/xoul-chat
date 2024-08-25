@@ -59,6 +59,29 @@ export default function ChatRoom({ questionData }) {
     }
   }, [darkMode]);
 
+  const selectRandomTopic = () => {
+    const sessions = Object.keys(questionData);
+    const randomSession = sessions[Math.floor(Math.random() * sessions.length)];
+    setSelectedSession(randomSession);
+
+    const questions = questionData[randomSession].questions;
+    const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+    setSelectedQuestion(randomQuestion);
+
+    // Clear previous messages when a new topic is selected
+    setMessages([]);
+
+    // Optionally, you can add an initial AI message here
+    setIsTyping(true);
+    setTimeout(() => {
+      setIsTyping(false);
+      setMessages([{ 
+        role: 'assistant', 
+        content: `[[Let's get started!]]\n\n- ${randomQuestion}` 
+      }]);
+    }, 500 + Math.random() * 500); // Random delay between 0.5-1 seconds
+  };
+
   const handleSessionChange = (e) => {
     setSelectedSession(e.target.value);
     setSelectedQuestion('');
@@ -135,6 +158,15 @@ export default function ChatRoom({ questionData }) {
             ))}
           </select>
           <div className="flex items-center space-x-2">
+            <button
+              onClick={selectRandomTopic}
+              className={`px-2 py-1 text-sm rounded ${
+                darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
+              } hover:bg-opacity-80 transition-colors`}
+              aria-label="Select random topic"
+            >
+              🎲
+            </button>
             <button
               onClick={toggleFontSize}
               className={`px-2 py-1 text-sm rounded ${
