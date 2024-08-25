@@ -31,7 +31,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
                 ? darkMode ? 'text-blue-300' : 'text-blue-700'
                 : darkMode ? 'text-green-300' : 'text-green-700'
             }`}>
-              {message.role === 'user' ? 'You' : 'Stephanie'}:
+              {message.role === 'user' ? 'You' : 'Dominic'}:
             </p>
             <p className={`mt-1 ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
@@ -48,7 +48,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
           <p className={`font-bold ${
             darkMode ? 'text-green-300' : 'text-green-700'
           }`}>
-            Stephanie:
+            Dominic:
           </p>
           <div className="typing-indicator">
             <span></span>
