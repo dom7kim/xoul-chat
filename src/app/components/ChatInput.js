@@ -50,7 +50,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
 
       mediaRecorderRef.current.start();
       setPreviousMessage(message);
-      setMessage("Listening ...");
+      setMessage('');
       setIsRecording(true);
     } catch (error) {
       console.error('Error accessing microphone:', error);
@@ -61,7 +61,6 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
     if (mediaRecorderRef.current && mediaRecorderRef.current.state === 'recording') {
       mediaRecorderRef.current.stop();
       setIsRecording(false);
-      setMessage(previousMessage);
     }
   };
 
@@ -88,17 +87,17 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
         setMessage(text);
       } else {
         console.error('Transcription failed:', await response.text());
-        setMessage(previousMessage); // Restore previous message if transcription fails
+        setMessage(''); // Clear the message if transcription fails
       }
     } catch (error) {
       console.error('Error processing audio:', error);
-      setMessage(previousMessage); // Restore previous message if there's an error
+      setMessage(''); // Clear the message if there's an error
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (message.trim() && !isDisabled && !isRecording) {
+    if (message.trim() && !isDisabled && !isRecording && !isTranscribing) {
       onSendMessage(message);
       setMessage('');
     }
@@ -125,15 +124,23 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
       <div className="relative flex-grow">
         <input
           type="text"
-          value={message}
+          value={isRecording || isTranscribing ? '' : message}
           onChange={(e) => setMessage(e.target.value)}
           className={`w-full px-2 py-1 border-y focus:outline-none focus:ring-1 ${
             darkMode
               ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
               : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
           } ${largeFont ? 'text-lg' : 'text-base'}`}
-          placeholder={isDisabled ? "Select a topic to start chatting" : "Type a message or click the mic to speak..."}
-          disabled={isDisabled || isTranscribing || isRecording}
+          placeholder={
+            isDisabled
+              ? "Select a topic to start chatting"
+              : isRecording
+                ? "Listening ..."
+                : isTranscribing
+                  ? "Transcribing ..."
+                  : "Type a message or click the mic to speak..."
+          }
+          disabled={isDisabled || isRecording || isTranscribing}
         />
         {isRecording && (
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -149,13 +156,13 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
       <button
         type="submit"
         className={`px-3 py-1 rounded-r-md focus:outline-none focus:ring-1 transition-colors ${
-          isDisabled || !message.trim() || isTranscribing || isRecording
+          isDisabled || !message.trim() || isRecording || isTranscribing
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
             : darkMode
               ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300'
               : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200'
         } ${largeFont ? 'text-lg' : 'text-base'}`}
-        disabled={isDisabled || !message.trim() || isTranscribing || isRecording}
+        disabled={isDisabled || !message.trim() || isRecording || isTranscribing}
       >
         Send
       </button>
