@@ -103,12 +103,22 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
     }
   };
 
+  const buttonClasses = `px-3 flex items-center justify-center focus:outline-none focus:ring-1 transition-colors ${
+    largeFont ? 'text-lg h-12' : 'text-base h-10'
+  }`;
+
+  const inputClasses = `w-full px-2 focus:outline-none focus:ring-1 ${
+    darkMode
+      ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
+      : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
+  } ${largeFont ? 'text-lg h-12' : 'text-base h-10'}`;
+
   return (
-    <form onSubmit={handleSubmit} className="flex w-full items-center">
+    <form onSubmit={handleSubmit} className="flex w-full items-stretch">
       <button
         type="button"
         onClick={toggleRecording}
-        className={`px-3 py-1 rounded-l-md focus:outline-none focus:ring-1 transition-colors ${
+        className={`${buttonClasses} rounded-l-md ${
           isDisabled
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
             : isRecording
@@ -116,7 +126,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
               : darkMode
                 ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300'
                 : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200'
-        } ${largeFont ? 'text-lg' : 'text-base'}`}
+        }`}
         disabled={isDisabled || isTranscribing}
       >
         {isRecording ? <MicOff size={18} /> : <Mic size={18} />}
@@ -126,11 +136,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
           type="text"
           value={isRecording || isTranscribing ? '' : message}
           onChange={(e) => setMessage(e.target.value)}
-          className={`w-full px-2 py-1 border-y focus:outline-none focus:ring-1 ${
-            darkMode
-              ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
-              : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-          } ${largeFont ? 'text-lg' : 'text-base'}`}
+          className={inputClasses}
           placeholder={
             isDisabled
               ? "Select a topic to start chatting"
@@ -155,13 +161,13 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
       </div>
       <button
         type="submit"
-        className={`px-3 py-1 rounded-r-md focus:outline-none focus:ring-1 transition-colors ${
+        className={`${buttonClasses} rounded-r-md ${
           isDisabled || !message.trim() || isRecording || isTranscribing
             ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
             : darkMode
               ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300'
               : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200'
-        } ${largeFont ? 'text-lg' : 'text-base'}`}
+        }`}
         disabled={isDisabled || !message.trim() || isRecording || isTranscribing}
       >
         Send
