@@ -103,15 +103,15 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
     }
   };
 
-  const buttonClasses = `px-3 flex items-center justify-center focus:outline-none focus:ring-1 transition-colors ${
-    largeFont ? 'text-lg h-12' : 'text-base h-10'
+  const buttonClasses = `px-2 flex items-center justify-center focus:outline-none focus:ring-1 transition-colors ${
+    largeFont ? 'text-base h-9' : 'text-sm h-8'
   }`;
 
   const inputClasses = `w-full px-2 focus:outline-none focus:ring-1 ${
     darkMode
       ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
       : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-  } ${largeFont ? 'text-lg h-12' : 'text-base h-10'}`;
+  } ${largeFont ? 'text-base h-9' : 'text-sm h-8'}`;
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full items-stretch">
@@ -129,7 +129,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
         }`}
         disabled={isDisabled || isTranscribing}
       >
-        {isRecording ? <MicOff size={18} /> : <Mic size={18} />}
+        {isRecording ? <MicOff size={16} /> : <Mic size={16} />}
       </button>
       <div className="relative flex-grow">
         <input
@@ -150,12 +150,12 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
         />
         {isRecording && (
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <span className="text-sm text-gray-400">{RECORDING_TIME_LIMIT - recordingTime}s</span>
+            <span className="text-xs text-gray-400">{RECORDING_TIME_LIMIT - recordingTime}s</span>
           </div>
         )}
         {isTranscribing && (
           <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <Loader className="animate-spin h-5 w-5 text-gray-400" />
+            <Loader className="animate-spin h-4 w-4 text-gray-400" />
           </div>
         )}
       </div>
