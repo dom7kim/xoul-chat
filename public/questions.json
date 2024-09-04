@@ -1,5 +1,5 @@
 {
-  "1: Animals 🐾": {
+  "Sat 1: Animals 🐾": {
     "questions": [
       "What are your favorite animals, and why do you love them? Have you ever had an encounter with them in real life?",
       "Have you had any pets? If so, tell us about them. If not, have you ever wanted a pet? What kind of pet would you have chosen?",
@@ -13,7 +13,7 @@
       "If you could have any animal as a pet, no matter how wild or exotic, what would you choose and why?"
     ]
   },
-  "2: Employee vs. Entrepreneur 💼🚀": {
+  "Sat 2: Employee vs. Entrepreneur 💼🚀": {
     "questions": [
       "Do you think you’re more suited to being an employee or an entrepreneur? Why?",
       "What do you think are the biggest advantages of being an employee? How about the biggest advantages of being an entrepreneur?",
@@ -27,7 +27,7 @@
       "In your opinion, is one path (employee or entrepreneur) better suited to certain stages of life, such as early career vs. later career?"
     ]
   },
-  "3: Dopamine Fasting 🎯": {
+  "Sat 3: Dopamine Fasting 🎯": {
     "questions": [
       "Have you heard of dopamine fasting? What do you think it involves, based on the name alone?",
       "How do you think modern technology and social media contribute to dopamine addiction? Have you noticed this in your own life?",
@@ -39,6 +39,34 @@
       "How do you think dopamine fasting could affect mental health? Could it lead to better emotional well-being, or might it have drawbacks?",
       "In your opinion, is there a healthy balance between enjoying dopamine-inducing activities and maintaining self-control? How do you achieve that balance?",
       "Do you think the concept of dopamine fasting is a passing trend, or do you see it becoming a more widely adopted practice? Why?"
+    ]
+  }, 
+  "Thu 1: Childhood Memories 🌟": {
+    "questions": [
+      "How did you spend your free time as a child? What hobbies or activities were you passionate about?",
+      "What kind of student were you in school? Were you more of a studious type, or did you prefer having fun?",
+      "What was your favorite subject or class in school, and why did you enjoy it?",
+      "Did you participate in any clubs or extracurricular activities? What were they, and what did you enjoy about them?",
+      "Do you remember having a childhood crush? How did you feel, and did you ever confess your feelings?",
+      "Can you share a memorable experience from a school festival or event? What made it special?",
+      "What friendships from your childhood stand out the most to you, and why were they important?",
+      "What did you dream of becoming when you were a child? How did those dreams change as you grew older?",
+      "What were some of your favorite songs or TV shows growing up? Do you still listen to or watch any of them?",
+      "Did you have a favorite game or way to play with friends? What do you remember most about those times?"
+    ]
+  },
+  "Thu 2: Fun and Lighthearted Debates 🎉": {
+    "questions": [
+      "Superpower Showdown: If you could have one superpower, what would it be, and how would you use it in everyday life?",
+      "Guilty Pleasures: What’s your guilty pleasure TV show, movie, or snack that you’re slightly embarrassed to admit you love?",
+      "Food Fight: Pineapple on pizza: delicious or a crime against pizza?",
+      "The Ultimate Dinner Party: If you could invite three famous people (dead or alive) to a dinner party, who would you choose and why?",
+      "Time Travel Choices: If you could travel to any time period in history (past or future), when would you go and what would you do?",
+      "What’s the Best Pet?: What’s the best pet: dog, cat, or something else entirely?",
+      "Fantasy Career Switch: If you could instantly switch careers to something completely different with no training, what would you choose?",
+      "Technology Takeover: Which piece of technology has had the biggest impact on your life, and could you live without it?",
+      "Social Media: Love It or Hate It?: Is social media a necessary evil, or does it do more harm than good?",
+      "Would You Rather?: Would you rather always be 10 minutes late or 20 minutes early?"
     ]
   }
 }
