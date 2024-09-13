@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import PlayButton from './PlayButton';
 
 export default function ChatMessages({ messages, darkMode, largeFont, isTyping }) {
   const messagesEndRef = useRef(null);
@@ -26,13 +27,18 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
               ? darkMode ? 'bg-blue-900 ml-auto' : 'bg-blue-100 ml-auto'
               : darkMode ? 'bg-gray-700' : 'bg-gray-100'
           } max-w-[90%] shadow`}>
-            <p className={`font-bold ${
-              message.role === 'user'
-                ? darkMode ? 'text-blue-300' : 'text-blue-700'
-                : darkMode ? 'text-green-300' : 'text-green-700'
-            }`}>
-              {message.role === 'user' ? 'You' : 'Dominic'}:
-            </p>
+            <div className="flex justify-between items-start">
+              <p className={`font-bold ${
+                message.role === 'user'
+                  ? darkMode ? 'text-blue-300' : 'text-blue-700'
+                  : darkMode ? 'text-green-300' : 'text-green-700'
+              }`}>
+                {message.role === 'user' ? 'You' : 'Stephanie'}:
+              </p>
+              {message.role === 'assistant' && (
+                <PlayButton text={message.content} darkMode={darkMode} />
+              )}
+            </div>
             <p className={`mt-1 ${
               darkMode ? 'text-gray-300' : 'text-gray-700'
             } whitespace-pre-wrap`}>
@@ -48,7 +54,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
           <p className={`font-bold ${
             darkMode ? 'text-green-300' : 'text-green-700'
           }`}>
-            Dominic:
+            Stephanie:
           </p>
           <div className="typing-indicator">
             <span></span>
