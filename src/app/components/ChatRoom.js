@@ -136,6 +136,22 @@ export default function ChatRoom({ questionData }) {
     setLargeFont(!largeFont);
   };
 
+  const handleStartOver = () => {
+    if (selectedQuestion) {
+      // Immediately clear all messages and set typing to true
+      setMessages([]);
+      setIsTyping(true);
+
+      // Add the initial message and set typing to false after a delay
+      setTimeout(() => {
+        setMessages([
+          { role: 'assistant', content: `[[Let's start over!]]\n\n- ${selectedQuestion}` }
+        ]);
+        setIsTyping(false);
+      }, 500); // Single delay of 0.5 second
+    }
+  };
+
   const copyConversation = () => {
     const topicTitle = selectedSession;
     const currentQuestion = selectedQuestion;
@@ -256,14 +272,25 @@ Generated on ${new Date().toLocaleString()}
               </svg>
             </div>
           </div>
-          <CopyButton 
-            onClick={copyConversation} 
-            darkMode={darkMode}
-            className={`p-1 rounded ${
+          <button
+            onClick={handleStartOver}
+            className={`px-2 py-1 text-sm rounded ${
               darkMode 
                 ? 'bg-gray-600 text-white hover:bg-gray-500' 
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            }`}
+            } transition-colors`}
+            aria-label="Start over"
+          >
+            🔄
+          </button>
+          <CopyButton 
+            onClick={copyConversation} 
+            darkMode={darkMode}
+            className={`px-2 py-1 text-sm rounded ${
+              darkMode 
+                ? 'bg-gray-600 text-white hover:bg-gray-500' 
+                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+            } transition-colors`}
           />
         </div>
       )}
