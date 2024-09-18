@@ -60,4 +60,4 @@ This project is licensed under the MIT License.
 
 ## About
 
-Xoul Chat is developed by Dongwon at Xoul.
+Xoul Chat is developed by Dongwon Kim at Xoul.
