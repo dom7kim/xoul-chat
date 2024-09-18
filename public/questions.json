@@ -1,72 +1,30 @@
 {
-  "Thu 1: Unwinding After a Long Day 🛌": {
+  "1: Exploring Our Emotions 🌥️": {
     "questions": [
-      "What’s your go-to activity when you need to unwind after a busy day?",
-      "Do you have any hobbies or activities that instantly put you in a good mood?",
-      "What’s the best way to spend a quiet evening at home — a book, a movie, or something else?",
-      "What’s a small self-care routine you like to do to help yourself relax?",
-      "Have you picked up any new hobbies or interests recently? What sparked your curiosity?",
-      "If you had the whole evening free, what’s something fun or relaxing you’d love to do?",
-      "Do you prefer relaxing alone or spending time with friends to recharge?",
-      "What’s your favorite comfort food or drink to enjoy after a stressful day?",
-      "How do you like to unwind on the weekend — do you plan activities or just go with the flow?",
-      "What’s a show, book, or podcast that you’ve been enjoying lately to help you relax?"
+      "How would you describe your emotional personality? Are you generally more expressive or reserved with your feelings?",
+      "What kinds of emotions do you usually feel throughout a typical day? How do you deal with them?",
+      "Do you find it easy or difficult to express your emotions to others? Why do you think that is?",
+      "Are there certain emotions you tend to hide or suppress? How does that affect you in the long run?",
+      "How do you usually react when you feel overwhelmed by emotions? Do you have any strategies to calm yourself down?",
+      "Have you ever felt like you were 'too emotional' in a situation? How did you handle it?",
+      "What role do emotions play in making decisions for you? Do you tend to rely more on feelings or logic?",
+      "How important do you think it is to have a healthy relationship with your emotions? What steps do you take to maintain that balance?",
+      "How do you feel about crying? Is it something you find easy or difficult to do?",
+      "Do you believe it’s possible to control your emotions completely, or do you think some emotions are just too strong to manage?"
     ]
   },
-  "Thu 2: Creative and Personal Reflections 🌈": {
+  "2: Exploring Life's Fun Dilemmas! 🌟": {
     "questions": [
-      "Desert Island Dilemmas: If you were stranded on a desert island and could only bring three items, what would they be?",
-      "Bucket List Adventures: What’s one thing on your bucket list that you’ve always wanted to do?",
-      "Celebrity Swap: If you could trade lives with any celebrity for a day, who would it be and why?",
-      "TV and Movie Debates: Which TV show or movie is wildly overrated, and why?",
-      "Hidden Talents: Do you have any unusual or hidden talents that not many people know about?",
-      "Best Inventions Ever: What do you think is the best invention of all time, and why?",
-      "Music Madness: What’s your go-to karaoke song, and why did you choose it?",
-      "Favorite Childhood Memories: What was your favorite thing to do as a child, and do you still enjoy it now?",
-      "Fashion Faux Pas: What’s a fashion trend you followed in the past that you now find embarrassing?",
-      "Dream Travel Destination: If you could travel anywhere in the world, where would you go and what would you do?"
-    ]
-  },
-  "Sat 1: Attraction 💘": {
-    "questions": [
-      "What are some qualities that you find most attractive in a person, whether as a friend or a romantic partner?",
-      "Do you believe in love at first sight? Why or why not?",
-      "Can a person's personality change how physically attractive they seem to you? How so?",
-      "Is there a particular place or city that you find attractive or feel drawn to? Why do you think that is?",
-      "How important are shared interests when it comes to attraction?",
-      "Have you ever been attracted to someone because of their talents or skills? What were they?",
-      "In your opinion, how much does physical appearance matter in long-term relationships?",
-      "What role do cultural differences play in attraction for you? Have you ever experienced it firsthand?",
-      "Do you think media (movies, TV shows, social media) has changed what people find attractive? If so, how?",
-      "What was your first crush like? Do you still remember what drew you to them?"
-    ]
-  },
-  "Sat 2: Lessons from Experiences 🎓": {
-    "questions": [
-      "Can you share a time when a failure taught you a valuable lesson? What did you learn from that experience?",
-      "What is an accomplishment you’re most proud of, and what did it take to achieve it?",
-      "Have you ever experienced a tough situation that turned out to be a blessing in disguise? What happened?",
-      "What’s something you've learned from a past relationship that changed how you approach future ones?",
-      "How has a work or school challenge shaped the way you handle similar situations now?",
-      "Have you ever learned something important about yourself through a friendship? What was it?",
-      "What’s a piece of advice you wish you could give your younger self?",
-      "How do you handle setbacks or disappointments in your life today compared to how you handled them in the past?",
-      "Is there an experience that taught you something surprising about other people? What was it?",
-      "Do you think failure is necessary for success? Why or why not?"
-    ]
-  },
-  "Sat 3: Talents 🌟": {
-    "questions": [
-      "What is a talent or skill you have that not many people know about?",
-      "Have you ever been surprised by a hidden talent you discovered in yourself? How did you find out about it?",
-      "Do you think people are born with certain talents, or can anyone develop a skill with practice?",
-      "What talent do you admire most in other people? Why does it stand out to you?",
-      "Is there a skill or hobby you’ve always wanted to learn but haven’t yet? What’s holding you back?",
-      "What’s a talent you had as a child but no longer practice? Do you miss it?",
-      "How do you think talents contribute to a person’s identity or self-confidence?",
-      "Have you ever had to work really hard to develop a talent or skill? What was that process like?",
-      "Do you believe that talents need to be shared with others, or can they be something just for yourself? Why?",
-      "What’s the most unusual or unexpected talent you’ve ever seen in someone else?"
+      "**Would you rather** be able to learn any new skill instantly or travel anywhere in the world for free? How would you use this new ability in your life?",
+      "**What if** you could live in any city in the world for a year, expenses covered? Where would you go, and how would you make the most of your time there?",
+      "**Debate:** Is it better to spend money on experiences (like travel or concerts) or on physical items (like gadgets or fashion)? How do these choices shape our lives?",
+      "**Would you rather** have a rewind button or a pause button for moments in your life? How would you use this ability to shape your experiences?",
+      "**What if** you had to choose between living in a country with amazing food but no entertainment options, or a country with incredible entertainment but only basic food? Which would you prefer, and why?",
+      "**Debate:** Is it more meaningful to have a large circle of acquaintances or a small group of close friends? How do different types of relationships impact your happiness?",
+      "**Would you rather** always be the smartest person in the room or the funniest? How do intelligence and humor influence social interactions?",
+      "**What if** you could only keep one form of entertainment for the rest of your life: books, movies, music, or games? Which would you choose, and how would it shape your daily routine?",
+      "**Debate:** Which has a bigger impact on shaping who you are: the people you meet or the places you go? Can one exist meaningfully without the other?",
+      "**Would you rather** never have to sleep or never have to eat again? What would you do with the extra time, and how would it change your lifestyle?"
     ]
   }
 }
