@@ -65,16 +65,15 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
               Feedback
             </button>
             {expandedFeedback[index] && (
-              <>
-                <p className={`mt-2 ${
+              <div className={`mt-2 pl-3 border-l-4 ${
+                darkMode ? 'border-blue-500 bg-gray-800' : 'border-blue-500 bg-gray-50'
+              } p-2 rounded`}>
+                <p className={`${
                   darkMode ? 'text-gray-300' : 'text-gray-700'
                 }`}>
                   {feedback}
                 </p>
-                <hr className={`my-2 ${
-                  darkMode ? 'border-gray-600' : 'border-gray-300'
-                }`} />
-              </>
+              </div>
             )}
           </div>
         )}

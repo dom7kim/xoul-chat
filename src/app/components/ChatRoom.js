@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
+import CopyButton from './CopyButton';
 
 export default function ChatRoom({ questionData }) {
   const [messages, setMessages] = useState([]);
@@ -135,6 +136,49 @@ export default function ChatRoom({ questionData }) {
     setLargeFont(!largeFont);
   };
 
+  const copyConversation = () => {
+    const topicTitle = selectedSession;
+    const currentQuestion = selectedQuestion;
+    let conversationMarkdown = '';
+
+    messages.forEach((msg, index) => {
+      if (msg.role === 'user') {
+        conversationMarkdown += `**You:** ${msg.content.trim()}\n\n`;
+      } else if (msg.role === 'assistant') {
+        const feedbackMatch = msg.content.match(/\[\[(.*?)\]\]/s);
+        const feedback = feedbackMatch ? feedbackMatch[1].trim() : '';
+        const content = msg.content.replace(/\[\[.*?\]\]/s, '').trim();
+
+        // Skip the first assistant message if it's just repeating the question
+        if (index === 0 && content.includes(currentQuestion)) {
+          return;
+        }
+
+        if (index > 0 && messages[index - 1].role === 'user' && feedback) {
+          conversationMarkdown += `> **Feedback:** ${feedback}\n\n`;
+        }
+
+        conversationMarkdown += `**Stephanie:** ${content}\n\n`;
+      }
+    });
+
+    const markdownToCopy = `# ${topicTitle}
+
+## Question
+${currentQuestion}
+
+## Conversation
+${conversationMarkdown.trim()}
+
+---
+Generated on ${new Date().toLocaleString()}
+`;
+
+    navigator.clipboard.writeText(markdownToCopy)
+      .then(() => console.log('Conversation copied to clipboard in Markdown format'))
+      .catch(err => console.error('Failed to copy: ', err));
+  };
+
   return (
     <div className={`w-full flex flex-col ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
@@ -158,6 +202,7 @@ export default function ChatRoom({ questionData }) {
             ))}
           </select>
           <div className="flex items-center space-x-2">
+            <CopyButton onClick={copyConversation} darkMode={darkMode} />
             <button
               onClick={selectRandomTopic}
               className={`px-2 py-1 text-sm rounded ${
@@ -192,7 +237,7 @@ export default function ChatRoom({ questionData }) {
             <select 
               value={selectedQuestion} 
               onChange={handleQuestionChange} 
-              className={`w-full p-1 border rounded shadow-sm focus:ring appearance-none ${
+              className={`w-full p-1 pr-8 border rounded shadow-sm focus:ring appearance-none ${
                 darkMode 
                   ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
                   : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
