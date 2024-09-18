@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Copy, Check } from 'lucide-react';
 
-export default function CopyButton({ onClick, darkMode }) {
+export default function CopyButton({ onClick, darkMode, className = '' }) {
   const [copied, setCopied] = useState(false);
 
   const handleClick = () => {
@@ -13,11 +13,7 @@ export default function CopyButton({ onClick, darkMode }) {
   return (
     <button
       onClick={handleClick}
-      className={`p-2 rounded-md focus:outline-none focus:ring-2 ${
-        darkMode
-          ? 'bg-gray-700 text-white hover:bg-gray-600 focus:ring-gray-500'
-          : 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400'
-      }`}
+      className={`focus:outline-none focus:ring-2 ${className}`}
       aria-label="Copy conversation"
     >
       {copied ? (

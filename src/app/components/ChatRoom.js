@@ -202,7 +202,6 @@ Generated on ${new Date().toLocaleString()}
             ))}
           </select>
           <div className="flex items-center space-x-2">
-            <CopyButton onClick={copyConversation} darkMode={darkMode} />
             <button
               onClick={selectRandomTopic}
               className={`px-2 py-1 text-sm rounded ${
@@ -233,7 +232,8 @@ Generated on ${new Date().toLocaleString()}
           </div>
         </div>
         {selectedSession && (
-          <div className="relative">
+        <div className="relative flex items-center space-x-2">
+          <div className="relative flex-grow">
             <select 
               value={selectedQuestion} 
               onChange={handleQuestionChange} 
@@ -256,7 +256,17 @@ Generated on ${new Date().toLocaleString()}
               </svg>
             </div>
           </div>
-        )}
+          <CopyButton 
+            onClick={copyConversation} 
+            darkMode={darkMode}
+            className={`p-1 rounded ${
+              darkMode 
+                ? 'bg-gray-600 text-white hover:bg-gray-500' 
+                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+            }`}
+          />
+        </div>
+      )}
       </div>
       <div ref={chatContainerRef} className="flex flex-col flex-grow overflow-hidden">
         <div className="flex-grow overflow-y-auto">
