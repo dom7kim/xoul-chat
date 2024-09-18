@@ -274,11 +274,11 @@ Generated on ${new Date().toLocaleString()}
           </div>
           <button
             onClick={handleStartOver}
-            className={`p-1 rounded ${
+            className={`px-2 py-1 text-sm rounded ${
               darkMode 
                 ? 'bg-gray-600 text-white hover:bg-gray-500' 
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            }`}
+            } transition-colors`}
             aria-label="Start over"
           >
             🔄
@@ -286,11 +286,11 @@ Generated on ${new Date().toLocaleString()}
           <CopyButton 
             onClick={copyConversation} 
             darkMode={darkMode}
-            className={`p-1 rounded ${
+            className={`px-2 py-1 text-sm rounded ${
               darkMode 
                 ? 'bg-gray-600 text-white hover:bg-gray-500' 
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            }`}
+            } transition-colors`}
           />
         </div>
       )}

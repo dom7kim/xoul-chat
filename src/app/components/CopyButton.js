@@ -17,9 +17,9 @@ export default function CopyButton({ onClick, darkMode, className = '' }) {
       aria-label="Copy conversation"
     >
       {copied ? (
-        <Check className="w-5 h-5" />
+        <Check className="w-4 h-4" />
       ) : (
-        <Copy className="w-5 h-5" />
+        <Copy className="w-4 h-4" />
       )}
     </button>
   );
