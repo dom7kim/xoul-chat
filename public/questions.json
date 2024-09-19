@@ -1,30 +1,44 @@
 {
-  "1: Exploring Our Emotions 🌥️": {
+  "1: Childhood Memories 🌟": {
     "questions": [
-      "How would you describe your emotional personality? Are you generally more expressive or reserved with your feelings?",
-      "What kinds of emotions do you usually feel throughout a typical day? How do you deal with them?",
-      "Do you find it easy or difficult to express your emotions to others? Why do you think that is?",
-      "Are there certain emotions you tend to hide or suppress? How does that affect you in the long run?",
-      "How do you usually react when you feel overwhelmed by emotions? Do you have any strategies to calm yourself down?",
-      "Have you ever felt like you were 'too emotional' in a situation? How did you handle it?",
-      "What role do emotions play in making decisions for you? Do you tend to rely more on feelings or logic?",
-      "How important do you think it is to have a healthy relationship with your emotions? What steps do you take to maintain that balance?",
-      "How do you feel about crying? Is it something you find easy or difficult to do?",
-      "Do you believe it’s possible to control your emotions completely, or do you think some emotions are just too strong to manage?"
+      "How did you spend your free time as a child? What hobbies or activities were you passionate about?",
+      "What kind of student were you in school? Were you more of a studious type, or did you prefer having fun?",
+      "What was your favorite subject or class in school, and why did you enjoy it?",
+      "Did you participate in any clubs or extracurricular activities? What were they, and what did you enjoy about them?",
+      "Do you remember having a childhood crush? How did you feel, and did you ever confess your feelings?",
+      "Can you share a memorable experience from a school festival or event? What made it special?",
+      "What friendships from your childhood stand out the most to you, and why were they important?",
+      "What did you dream of becoming when you were a child? How did those dreams change as you grew older?",
+      "What were some of your favorite songs or TV shows growing up? Do you still listen to or watch any of them?",
+      "Did you have a favorite game or way to play with friends? What do you remember most about those times?"
     ]
   },
-  "2: Exploring Life's Fun Dilemmas! 🌟": {
+  "2: Giving and Receiving Advice 💡": {
     "questions": [
-      "Would you rather be able to learn any new skill instantly or travel anywhere in the world for free? How would you use this new ability in your life?",
-      "What if you could live in any city in the world for a year, expenses covered? Where would you go, and how would you make the most of your time there?",
-      "Debate: Is it better to spend money on experiences (like travel or concerts) or on physical items (like gadgets or fashion)? How do these choices shape our lives?",
-      "Would you rather have a rewind button or a pause button for moments in your life? How would you use this ability to shape your experiences?",
-      "What if you had to choose between living in a country with amazing food but no entertainment options, or a country with incredible entertainment but only basic food? Which would you prefer, and why?",
-      "Debate: Is it more meaningful to have a large circle of acquaintances or a small group of close friends? How do different types of relationships impact your happiness?",
-      "Would you rather always be the smartest person in the room or the funniest? How do intelligence and humor influence social interactions?",
-      "What if you could only keep one form of entertainment for the rest of your life: books, movies, music, or games? Which would you choose, and how would it shape your daily routine?",
-      "Debate: Which has a bigger impact on shaping who you are: the people you meet or the places you go? Can one exist meaningfully without the other?",
-      "Would you rather never have to sleep or never have to eat again? What would you do with the extra time, and how would it change your lifestyle?"
+      "How often do you seek advice, and in what situations? Who do you usually turn to for guidance?",
+      "Can you recall a specific piece of advice that made a lasting impact on your life? Why did it resonate with you?",
+      "Have you ever received advice that you found unhelpful or even harmful? What do you think the person's intentions were, and how did you handle it?",
+      "Do people frequently come to you for advice? What types of situations do they seek your opinion on?",
+      "Do you enjoy giving advice to others? What do you find most challenging or rewarding about it?",
+      "What is a piece of advice you've given to someone that you feel really helped them? How did you come up with it?",
+      "In your opinion, what are the qualities of good advice? How can you tell if advice is worth following?",
+      "Do you think it's harder to give advice or to receive it? Why do you feel this way?",
+      "Let's role-play! What advice would you give to someone facing one of these situations:\n- A. Someone starting their first job\n- B. Someone considering changing jobs\n- C. Someone thinking of giving up on a long-term goal\n- D. Someone feeling lost in their career\n- E. Someone losing confidence in themselves\n- F. Someone wondering whether they should ask their crush out",
+      "How do you handle advice that you disagree with? Do you find it easy to reject advice, or do you feel pressured to follow it?"
+    ]
+  },
+  "3: Texting and Relationships 📱💬": {
+    "questions": [
+      "How often do you text someone you're in a romantic relationship with? Do you think the amount of texting reflects the closeness of the relationship?",
+      "Do you have a preferred frequency of texting with your partner? How does it make you feel if it's more or less than that?",
+      "How do you handle inconsistency in texting from a romantic partner? Does it make you feel uncertain or do you not mind it?",
+      "Do you think texting too much or too little can affect the health of a relationship? Why or why not?",
+      "How quickly do you typically respond to texts from romantic partners, friends, family, or work colleagues? Do you think different relationships require different response times?",
+      "Have you ever experienced a situation where someone's texting style or frequency made you feel closer to or more distant from them? How did you navigate that?",
+      "What are your thoughts on the scarcity of communication in a relationship? Can less frequent texting sometimes be a sign of a problem, or is it just a matter of personal preference?",
+      "How do you feel when someone you care about takes a long time to reply? Does it change depending on the person or context?",
+      "Do you believe the way we text can sometimes create misunderstandings in romantic relationships? What can be done to avoid that?",
+      "What's your strategy when you need space but don't want to hurt someone by not texting them as much? How do you communicate your need for personal time?"
     ]
   }
 }
