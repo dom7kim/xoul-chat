@@ -1,29 +1,56 @@
 import { NextResponse } from 'next/server';
-import { ElevenLabsClient, ElevenLabs } from "elevenlabs";
 
-const client = new ElevenLabsClient({ apiKey: process.env.ELEVENLABS_API_KEY });
+const UNREAL_SPEECH_API_URL = 'https://api.v7.unrealspeech.com/speech';
+const UNREAL_SPEECH_API_KEY = process.env.UNREAL_SPEECH_API_KEY;
+
+// Improved function to remove emojis from text
+function removeEmojis(text) {
+  return text.replace(
+    /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
+    ''
+  ).replace(/\s+/g, ' ').trim();
+}
 
 export async function POST(request) {
   const { text } = await request.json();
 
+  // Remove emojis from the input text
+  const filteredText = removeEmojis(text);
+
+  // console.log('Original text:', text);
+  // console.log('Filtered text:', filteredText);
+
   try {
-    const audioStream = await client.textToSpeech.convert("cgSgspJ2msm6clMCkdW9", {
-      optimize_streaming_latency: ElevenLabs.OptimizeStreamingLatency.Zero,
-      output_format: ElevenLabs.OutputFormat.Mp32205032,
-      text: text,
-      voice_settings: {
-        stability: 0.3,
-        similarity_boost: 0.5,
-        style: 0.2
-      }
+    const response = await fetch(UNREAL_SPEECH_API_URL, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${UNREAL_SPEECH_API_KEY}`
+      },
+      body: JSON.stringify({
+        Text: filteredText,
+        VoiceId: 'Liv',
+        Bitrate: '192k',
+        Speed: '0',
+        Pitch: '1.03',
+        TimestampType: 'sentence'
+      })
     });
 
-    // Convert the audio stream to a buffer
-    const chunks = [];
-    for await (const chunk of audioStream) {
-      chunks.push(chunk);
+    if (!response.ok) {
+      throw new Error('Unreal Speech API request failed');
     }
-    const audioBuffer = Buffer.concat(chunks);
+
+    const data = await response.json();
+
+    // Fetch the audio file from the provided OutputUri
+    const audioResponse = await fetch(data.OutputUri);
+    if (!audioResponse.ok) {
+      throw new Error('Failed to fetch audio file');
+    }
+
+    const audioBuffer = await audioResponse.arrayBuffer();
 
     // Return the audio buffer as a response
     return new NextResponse(audioBuffer, {

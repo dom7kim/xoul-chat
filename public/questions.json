@@ -1,44 +1,47 @@
 {
-  "1: Childhood Memories 🌟": {
+  "1: Destiny 🔮": {
+    "Instruction": "",
     "questions": [
-      "How did you spend your free time as a child? What hobbies or activities were you passionate about?",
-      "What kind of student were you in school? Were you more of a studious type, or did you prefer having fun?",
-      "What was your favorite subject or class in school, and why did you enjoy it?",
-      "Did you participate in any clubs or extracurricular activities? What were they, and what did you enjoy about them?",
-      "Do you remember having a childhood crush? How did you feel, and did you ever confess your feelings?",
-      "Can you share a memorable experience from a school festival or event? What made it special?",
-      "What friendships from your childhood stand out the most to you, and why were they important?",
-      "What did you dream of becoming when you were a child? How did those dreams change as you grew older?",
-      "What were some of your favorite songs or TV shows growing up? Do you still listen to or watch any of them?",
-      "Did you have a favorite game or way to play with friends? What do you remember most about those times?"
+      "What comes to mind when you hear the word 'destiny'? Do you believe that our lives are pre-determined in some way?",
+      "Have you ever consulted a fortune teller, used tarot cards, or explored your 'four pillars of destiny'? What was your experience like, and did it influence your thoughts about your future?",
+      "Why do you think more young Koreans are becoming interested in fortune-telling and astrology these days? Do you see it as just a trend, or do you think it reflects a deeper need?",
+      "Do you personally believe in destiny, or do you think we create our own paths through choices? Can both ideas exist together?",
+      "In your life so far, have you ever felt like something was 'meant to be'? Could you share any personal experience that felt like destiny played a role?",
+      "Some people use tarot cards or astrology to feel more in control of uncertainty. Do you think this is an effective way to handle life’s unpredictability?",
+      "How do you think destiny or fate is perceived differently in Korea compared to other cultures? Are there cultural or societal factors that influence these beliefs?",
+      "Do you believe that destiny is tied to our relationships with people? Have you ever felt that you were 'destined' to meet someone important in your life?",
+      "In modern life, where we focus so much on personal goals and achievement, does believing in destiny feel comforting or limiting to you? Why?",
+      "If you could know something about your destiny or future, would you want to? What kind of information would you be curious about, and why?"
     ]
   },
-  "2: Giving and Receiving Advice 💡": {
+  "2: Networking 🤝": {
+    "Instruction": "",
     "questions": [
-      "How often do you seek advice, and in what situations? Who do you usually turn to for guidance?",
-      "Can you recall a specific piece of advice that made a lasting impact on your life? Why did it resonate with you?",
-      "Have you ever received advice that you found unhelpful or even harmful? What do you think the person's intentions were, and how did you handle it?",
-      "Do people frequently come to you for advice? What types of situations do they seek your opinion on?",
-      "Do you enjoy giving advice to others? What do you find most challenging or rewarding about it?",
-      "What is a piece of advice you've given to someone that you feel really helped them? How did you come up with it?",
-      "In your opinion, what are the qualities of good advice? How can you tell if advice is worth following?",
-      "Do you think it's harder to give advice or to receive it? Why do you feel this way?",
-      "Let's role-play! What advice would you give to someone facing one of these situations:\n- A. Someone starting their first job\n- B. Someone considering changing jobs\n- C. Someone thinking of giving up on a long-term goal\n- D. Someone feeling lost in their career\n- E. Someone losing confidence in themselves\n- F. Someone wondering whether they should ask their crush out",
-      "How do you handle advice that you disagree with? Do you find it easy to reject advice, or do you feel pressured to follow it?"
+      "What does networking mean to you? Do you see it as a social skill, a professional tool, or something else?",
+      "How do you usually meet new people in your life? Is it through social events, mutual friends, online platforms, or another way?",
+      "Do you think networking is more important for personal life or professional growth? Why do you feel that way?",
+      "How has social media influenced the way we network with people? Do you think it's easier or harder to build meaningful connections now?",
+      "Have you had any memorable experiences while networking that led to unexpected opportunities? Can you share one that stands out?",
+      "What are the biggest challenges you face when trying to network with others? Do you feel comfortable starting conversations with new people?",
+      "When it comes to professional networking, do you prefer building a few strong connections or a wide range of contacts? What are the benefits and drawbacks of each approach?",
+      "Do you think networking styles differ across cultures? How is networking in Korea different from what you've experienced abroad?",
+      "How do you think networking will evolve in the future with advancements in technology and AI? Will it make networking easier or more impersonal?",
+      "If you could give advice to someone new to networking, what would it be? What strategies have worked best for you?"
     ]
   },
-  "3: Texting and Relationships 📱💬": {
+  "3: Storytelling 📖": {
+    "Instruction": "Ask follow-up questions to learn more about each other’s stories! 😊",
     "questions": [
-      "How often do you text someone you're in a romantic relationship with? Do you think the amount of texting reflects the closeness of the relationship?",
-      "Do you have a preferred frequency of texting with your partner? How does it make you feel if it's more or less than that?",
-      "How do you handle inconsistency in texting from a romantic partner? Does it make you feel uncertain or do you not mind it?",
-      "Do you think texting too much or too little can affect the health of a relationship? Why or why not?",
-      "How quickly do you typically respond to texts from romantic partners, friends, family, or work colleagues? Do you think different relationships require different response times?",
-      "Have you ever experienced a situation where someone's texting style or frequency made you feel closer to or more distant from them? How did you navigate that?",
-      "What are your thoughts on the scarcity of communication in a relationship? Can less frequent texting sometimes be a sign of a problem, or is it just a matter of personal preference?",
-      "How do you feel when someone you care about takes a long time to reply? Does it change depending on the person or context?",
-      "Do you believe the way we text can sometimes create misunderstandings in romantic relationships? What can be done to avoid that?",
-      "What's your strategy when you need space but don't want to hurt someone by not texting them as much? How do you communicate your need for personal time?"
+      "Tell us about a time when you traveled to a place that completely surprised you. What made the experience so unexpected, and how did it change you?",
+      "Can you share a story about a moment when you had to make a difficult decision? How did you feel at the time, and do you think you made the right choice in the end?",
+      "Describe an experience where you met someone who had a big impact on your life. What made this person special, and how did they influence you?",
+      "What’s a funny or embarrassing situation you’ve been in that you can laugh about now? How did you handle it at the time, and what did you learn from it?",
+      "Share a story about a time when you stepped out of your comfort zone. What did you do, and how did it affect your confidence or perspective?",
+      "Tell us about a goal or dream you once had but later decided to change. What made you shift your focus, and are you happy with that decision?",
+      "Can you remember a time when you received unexpected kindness from a stranger? How did it impact your day or even your view of people?",
+      "Talk about a time when you learned something new that completely changed your way of thinking. What was it, and how did it reshape your views?",
+      "Share a story of a project or task that seemed impossible at first, but you managed to complete. What motivated you to keep going, and how did you feel once it was done?",
+      "Tell us about a time when something went wrong during an event or plan. How did you handle the situation, and did it end up being a good story to tell later?"
     ]
   }
 }
