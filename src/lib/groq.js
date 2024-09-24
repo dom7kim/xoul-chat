@@ -9,7 +9,7 @@ export async function getChatCompletion(messages, systemPrompt, temperature, max
         { role: "system", content: systemPrompt },
         ...messages
       ],
-      model: "llama3-70b-8192", // mixtral-8x7b-32768, llama3-70b-8192
+      model: "llama-3.1-70b-versatile", // mixtral-8x7b-32768, llama3-70b-8192
       temperature: temperature,
       max_tokens: maxTokens,
     });
