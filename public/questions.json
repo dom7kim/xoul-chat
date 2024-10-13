@@ -1,47 +1,47 @@
 {
-  "Session 1: Talking About Sleep 😴": {
-    "Instruction": "*Ask follow-up questions to learn more about each other’s sleep habits!* 😊",
+  "Session 1: Gadgets and Apps 📱": {
+    "Instruction": "*Ask follow-up questions to learn more about each other’s experiences with technology!* 😊",
     "questions": [
-      "How many hours of sleep do you usually get each night? Do you think it's enough for you, and why?",
-      "What time do you typically go to bed and wake up? Are you more of a night owl or an early bird, and how does that impact your day?",
-      "Do you have any struggles with falling asleep or staying asleep? What do you do when you can't sleep?",
-      "Would you describe yourself as a light sleeper or a heavy sleeper? Has this changed over time, or has it always been the same?",
-      "Do you have any bedtime rituals or habits that help you wind down? What are the things that help you relax before bed?",
-      "How many alarms do you set in the morning, and what kind of sound do you prefer to wake up to? Do you find it hard to get up right away?",
-      "Have you ever had any funny or strange sleep habits, like snoring, sleeptalking, or sleepwalking? How did you or someone else discover these habits?",
-      "Do you take naps during the day? How long is the perfect nap for you, and do naps affect your nighttime sleep?",
-      "What’s the most vivid or memorable dream you've ever had? Do you often remember your dreams, and do you think they have any special meaning?",
-      "How do you feel when you don’t get enough sleep? How do you cope with sleep deprivation, and what strategies help you function on less sleep?"
+      "What is the one gadget or app you can’t live without? How does it improve your daily life?",
+      "What was the first gadget or piece of technology you remember using? Do you have any nostalgic memories associated with it?",
+      "Have you ever been obsessed with a particular gadget or app in the past? What made it so addictive, and do you still use it today?",
+      "What is the most useful app on your phone right now? Why do you find it essential, and how often do you use it?",
+      "If you could invent a new gadget or app, what would it do? What kind of problem would it solve, and why would it be useful to you?",
+      "Have you ever had any frustrating experiences with gadgets or apps? How did you handle the situation, and did it change how you use technology?",
+      "What gadget or app have you recently discovered that has surprised you in a good way? How did it change your routine or make things easier?",
+      "Are there any gadgets or apps that you think have been overhyped or unnecessary? Why do you feel that way?",
+      "Do you prefer using gadgets for leisure, productivity, or both? How do you strike a balance between fun and efficiency with your devices?",
+      "What do you think the future of gadgets and apps will look like? What kind of technology are you most excited or curious about?"
     ]
   },
-  "Session 2: Housemates 🏡": {
-    "Instruction": "*Ask follow-up questions to learn more about each other’s experiences!* 😊",
+  "Session 2: Karaoke in Changing Times 🎤": {
+    "Instruction": "",
     "questions": [
-      "Have you ever lived with housemates, whether friends, family, or even pets? What was the experience like, and how did it shape your daily life?",
-      "If you've never lived with housemates, is it something you'd be open to in the future? What kind of housemates do you think you'd get along with?",
-      "How do you think living with friends or strangers compares to living with family members? What are the pros and cons of each situation?",
-      "What are some challenges you've faced while living with others? How did you handle those issues, and what did you learn from the experience?",
-      "Do you have any fun or memorable stories about living with housemates or family members? What happened, and how did it affect your relationships?",
-      "If you could live with any character from a TV show, like 'Friends' or 'Big Bang Theory,' who would it be and why? What do you think living with them would be like?",
-      "What qualities do you think make someone a great housemate? Is there a specific trait or habit that you appreciate most in a housemate?",
-      "Have you ever had a housemate with a unique habit or personality? How did you adapt, and did it lead to any interesting stories?",
-      "For those who have pets as housemates, how does living with them differ from living with people? What are the joys and challenges of sharing your space with an animal?",
-      "If you could design your perfect housemate, what characteristics would they have? Would you prioritize compatibility, shared interests, or something else?"
+      "Karaoke used to be a popular way to unwind with friends or colleagues. How important is karaoke in your social life today compared to the past? Why do you think this has changed?",
+      "As more people in Korea are choosing to dine or drink alone ('honbap' and 'honsool'), how do you think this trend affects group activities like karaoke? Do you see these individual habits growing?",
+      "What do you think makes karaoke rooms so special compared to other social activities? Could these unique aspects survive in the future of entertainment?",
+      "Many karaoke venues have struggled due to social distancing and changing social habits. What other social activities have you seen decline, and do you think they’ll make a comeback?",
+      "Think about your favorite karaoke experience. What made that moment stand out to you? Do you think those experiences are harder to recreate now?",
+      "Karaoke is often associated with after-work gatherings (hoesik). How do you think changes in work culture, such as remote work or less frequent socializing, impact bonding activities like karaoke?",
+      "In your opinion, can karaoke apps or virtual singing experiences offer the same joy and connection as physical karaoke rooms? What do you think they’re missing, if anything?",
+      "Karaoke used to be a common part of family gatherings and celebrations. Do you feel that family traditions have shifted away from group activities like this? If so, why do you think that is?",
+      "As Korea continues to modernize, what kind of social activities do you think will replace karaoke rooms? Are there any emerging trends you’ve noticed?",
+      "If karaoke rooms continue to close down, do you think it’s a reflection of deeper changes in how people connect and socialize? How do you feel about the future of social gatherings in Korea?"
     ]
   },
-  "Session 3: Work Culture & Generations 💼": {
-    "Instruction": "*Ask follow-up questions to dive deeper into each other’s views!* 😊",
+  "Session 3: The Expectation Game: Navigating Highs and Lows 🎯": {
+    "Instruction": "",
     "questions": [
-      "Have you ever thought about working a four-day workweek? How do you think it would affect your work-life balance?",
-      "In Korea, there's a growing discussion about reducing working hours while maintaining productivity. Do you think a four-day workweek could work here, and what challenges might arise?",
-      "Some companies in Korea and around the world are experimenting with more flexible workweeks. Would you prefer flexibility in your work schedule, or would you rather stick to a structured routine?",
-      "If you could work four days a week, how would you use your extra day off? Do you think it would make you more productive during your working days?",
-      "In Korea, long work hours have been a major issue. Do you think shifting to a four-day workweek would help alleviate burnout, or could it introduce new pressures?",
-      "Working with younger generations can sometimes lead to differences in communication and work styles. Have you experienced this in your workplace? How do you manage those differences?",
-      "Some employers feel that younger generations' casual communication at work, such as using informal language or emojis, might be too relaxed for a professional environment. How do you feel about this concern? Is it just a change in communication style, or does it affect professionalism in the workplace?",
-      "Blending personal and professional identities is becoming more common in modern workplaces. For example, many people today prefer to be their true selves at work, rather than adopting a separate 'work persona.' How do you feel about this shift? Does it make the workplace more authentic, or does it blur important boundaries?",
-      "Generational gaps at work are nothing new, but what do you think makes younger generations different from previous ones? How can older generations learn to better collaborate with them?",
-      "How do you adapt to different communication styles when working with people from different generations? What strategies have you found helpful in bridging the gap between generations at work?"
+      "When you set goals for yourself, do you find that high expectations motivate you, or do they create more pressure? How do you balance ambition with realistic outcomes?",
+      "Have you ever had a time when something didn’t meet your expectations, but the outcome still taught you a valuable lesson? Although things didn’t go as planned, what did you take away from that experience?",
+      "Warren Buffett once said that low expectations are key to a lasting marriage, whereas some might argue that high standards are important for a fulfilling relationship. Do you think having low expectations makes relationships stronger? Why or why not?",
+      "While technology offers instant gratification, it seems to also raise our expectations in many areas of life. How do you think this has affected our ability to be patient, especially in things like career growth, building relationships, or waiting for results from a new project?",
+      "Jensen Huang, CEO of Nvidia, argues that people with high expectations often lack resilience, while resilience is crucial for success. How do you think managing expectations can help improve resilience in challenging situations, like a tough project at work or dealing with personal setbacks?",
+      "Can you recall a time when you set low expectations but were pleasantly surprised by the outcome? How did that contrast with moments when your expectations were much higher?",
+      "Although many believe that managing expectations is key to happiness, others feel that high expectations drive achievement. How do you personally manage your expectations when faced with uncertainty, like in a new job, a relationship, or even when planning a big trip?",
+      "Whereas setting high goals can motivate people to strive for more, having high expectations can sometimes lead to disappointment. How do you find the right balance between aiming high and being realistic?",
+      "Some argue that comparing yourself to others raises expectations, while others believe it can lower self-esteem. How has social comparison impacted your own expectations, and do you find it helpful or harmful in areas like your work, social life, or personal achievements?",
+      "While high expectations can push people toward success, they can also lead to frustration when outcomes fall short. In which areas of life do you think it's important to have high expectations, and where do you believe a more balanced approach is better?"
     ]
   }
 }
