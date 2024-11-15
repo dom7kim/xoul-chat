@@ -1,47 +1,47 @@
 {
-  "1. Food Preferences and Habits 🍽️": {
-    "Instruction": "Feel free to ask your own questions about food preferences and habits anytime—it’s always fun to learn from each other’s unique tastes and quirks!",
-    "questions": [
-      "When making Korean instant ramen, do you pour the entire soup powder or just a portion? Why do you prefer it that way?",
-      "Do you like your ramen noodles fully cooked or slightly undercooked for a firmer texture (꼬들꼬들)? What do you enjoy about that texture?",
-      "For Thai cuisine, do you enjoy having cilantro in your dishes, or do you avoid it? What are your reasons?",
-      "When ordering steak, which doneness level do you prefer: rare, medium, or well-done? How does this affect the flavor for you?",
-      "With tangsuyuk (Korean sweet and sour pork), do you prefer the sauce poured over the meat or served on the side for dipping? Why?",
-      "When eating cereal, do you pour the milk first or the cereal first? How does this impact your breakfast experience?",
-      "Do you have a unique food preference question you'd like to ask others? What interests you about that?",
-      "Have your food preferences changed over time? If so, what influenced those changes?",
-      "If you're a coffee drinker, what level of acidity do you prefer in your coffee? If not, why don’t you drink coffee?",
-      "Is there a food preference that others have that you just can't understand? What is it, and why does it seem odd to you?"
-    ]
-  },
-  "2. Side Hustles - Perspectives and Curiosities 💼": {
+  "Session 1: Household Chores: Daily Routines and Challenges 🧹": {
     "Instruction": "",
     "questions": [
-      "What are some side hustles you’ve heard of that you find interesting?",
-      "If you were to start a side hustle, what kind of work do you think you’d enjoy?",
-      "Why do you think so many people are interested in having side hustles nowadays?",
-      "Do you believe side hustles are a good idea for everyone? Why or why not?",
-      "How would you balance your current life with a side hustle, if you ever started one?",
-      "What skills do you think are helpful for people running a side hustle?",
-      "Do you see any downsides to the idea of having a side hustle?",
-      "How would you define the difference between a side hustle and a hobby?",
-      "Have you ever been inspired by someone’s side hustle story or success?",
-      "If you could try any side hustle just for fun, what would you pick and why?"
+      "What’s your least favorite household chore, and why?",
+      "Are there any chores you actually enjoy doing? Which ones?",
+      "If you could hire help for just one household task, which would it be?",
+      "How do you usually divide chores when living with family or roommates?",
+      "Do you have any tips or tricks for making chores easier or faster?",
+      "How often do you think certain chores (like cleaning the bathroom or doing laundry) should be done?",
+      "Have you ever tried making a schedule for chores? Did it work for you?",
+      "What’s one household chore that you think people tend to overlook?",
+      "Do you feel that doing chores can be relaxing, or is it always just a task to get done?",
+      "If you could invent one gadget to help with household chores, what would it be?"
     ]
   },
-  "3. Experiences as a Resident or Visitor in a Foreign Country 🌍": {
+  "Session 2: Meetups and Running Crews: A New Way to Connect? 🏃‍♂️": {
     "Instruction": "",
     "questions": [
-      "What were your first impressions when you arrived in a foreign country? Did any of these impressions change over time?",
-      "Can you share a memorable challenge you faced while abroad, whether as a resident or visitor? How did you handle it?",
-      "How did the local culture impact your daily routines or activities? Did you end up adopting any new habits or trying something different?",
-      "What were some of the biggest surprises you encountered as a resident or visitor? Were they positive or negative?",
-      "How did you manage language barriers, if there were any? Did you use specific strategies or tools that helped?",
-      "Was it easy to connect with people locally, even if just for a short time? What made it easier or more challenging?",
-      "Did spending time in another country change your view of your own culture or home country in any way?",
-      "Did technology or certain apps help you adapt to life abroad? Was there anything you wished had been easier?",
-      "How has your time abroad influenced your career, education, or personal plans?",
-      "What advice would you give someone preparing to spend time in a foreign country, whether as a resident or a visitor?"
+      "Besides our group, have you attended other meetups? What types of meetups have you enjoyed, and what made them memorable?",
+      "Many people are moving away from dating apps and joining social meetups like running crews. Why do you think people are seeking more in-person connections these days?",
+      "Running crews have become increasingly popular in Seoul. Have you ever participated in one, or would you consider joining? What appeals to you about this trend?",
+      "Some people say running crews are a great way to meet new people and stay active, while others find them disruptive. What are your thoughts on the pros and cons of these groups?",
+      "How do you feel about the shift from dating apps to more social activities like running clubs or game-based dating events? Do you think this trend will continue to grow?",
+      "SNL Korea recently covered the rise of running crews in Seoul. Why do you think this topic is becoming so popular in media and entertainment?",
+      "Some cities have started implementing rules to limit the size of running groups due to safety concerns. Do you think these restrictions are necessary, or do they take away from the fun of group activities?",
+      "Have you noticed any changes in how people interact socially post-pandemic? Do you think meetups and group activities are helping people reconnect?",
+      "Running crews often emphasize community and inclusivity, but some argue they can be exclusive or cliquish. What has been your experience with group dynamics in meetups or clubs?",
+      "If you could organize your own social meetup, what type of event would it be, and why?"
+    ]
+  },
+  "Session 3: Embracing Change and Lifelong Learning 🌱": {
+    "Instruction": "",
+    "questions": [
+      "Have you ever felt the need to change your career or learn a new skill later in life? What motivated you, or what would motivate you to take that step?",
+      "How do you think lifelong learning can impact personal growth and adaptability in today’s fast-changing world?",
+      "What challenges do you think people face when trying to learn new skills as adults? How can they overcome these obstacles?",
+      "Have you ever experienced a major career or life transition? How did you adapt, and what did you learn from the experience?",
+      "Do you believe it's possible to start over at any age? What factors might make it easier or harder to do so?",
+      "How important is perseverance when facing setbacks in your career or personal goals? Can you share a time when perseverance paid off for you?",
+      "What role does storytelling play in personal or professional success? Have you used storytelling in your own life to achieve something?",
+      "In what ways can failure be a valuable part of the learning process? Can you think of an example where failure helped you grow?",
+      "How can someone develop a growth mindset, especially when dealing with uncertainty or change in their life?",
+      "Do you agree that adaptability is one of the most important skills for success today? Why or why not?"
     ]
   }
 }
