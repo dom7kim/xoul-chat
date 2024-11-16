@@ -11,6 +11,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
   const [previousMessage, setPreviousMessage] = useState('');
   const mediaRecorderRef = useRef(null);
   const timerRef = useRef(null);
+  const textareaRef = useRef(null);
 
   useEffect(() => {
     if (isRecording) {
@@ -30,6 +31,13 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
 
     return () => clearInterval(timerRef.current);
   }, [isRecording]);
+
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  }, [message]);
 
   const startRecording = async () => {
     try {
@@ -103,75 +111,93 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
     }
   };
 
-  const buttonClasses = `px-2 flex items-center justify-center focus:outline-none focus:ring-1 transition-colors ${
-    largeFont ? 'text-base h-9' : 'text-sm h-8'
-  }`;
+  const buttonClasses = `px-2 flex items-center justify-center focus:outline-none focus:ring-1 transition-colors h-9`;
 
-  const inputClasses = `w-full px-2 focus:outline-none focus:ring-1 ${
+  const inputClasses = `w-full px-2 py-1.5 focus:outline-none focus:ring-1 ${
     darkMode
       ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
       : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-  } ${largeFont ? 'text-base h-9' : 'text-sm h-8'}`;
+  }`;
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full items-stretch">
-      <button
-        type="button"
-        onClick={toggleRecording}
-        className={`${buttonClasses} rounded-l-md ${
-          isDisabled
-            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : isRecording
-              ? 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-300'
-              : darkMode
-                ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300'
-                : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200'
-        }`}
-        disabled={isDisabled || isTranscribing}
-      >
-        {isRecording ? <MicOff size={16} /> : <Mic size={16} />}
-      </button>
-      <div className="relative flex-grow">
-        <input
-          type="text"
-          value={isRecording || isTranscribing ? '' : message}
-          onChange={(e) => setMessage(e.target.value)}
-          className={inputClasses}
-          placeholder={
+    <form onSubmit={handleSubmit} className="relative flex w-full min-h-[36px]">
+      <div className="absolute left-0 bottom-0 w-9">
+        <button
+          type="button"
+          onClick={toggleRecording}
+          className={`${buttonClasses} rounded-l-md border-y border-l ${
             isDisabled
-              ? "Select a topic to start chatting"
+              ? 'bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300'
               : isRecording
-                ? "Listening ..."
-                : isTranscribing
-                  ? "Transcribing ..."
-                  : "Type a message or click the mic to speak..."
-          }
-          disabled={isDisabled || isRecording || isTranscribing}
-        />
-        {isRecording && (
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <span className="text-xs text-gray-400">{RECORDING_TIME_LIMIT - recordingTime}s</span>
-          </div>
-        )}
-        {isTranscribing && (
-          <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-            <Loader className="animate-spin h-4 w-4 text-gray-400" />
-          </div>
-        )}
+                ? 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-300 border-red-600'
+                : darkMode
+                  ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300 border-blue-600'
+                  : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200 border-blue-500'
+          }`}
+          disabled={isDisabled || isTranscribing}
+        >
+          {isRecording ? <MicOff size={16} /> : <Mic size={16} />}
+        </button>
       </div>
-      <button
-        type="submit"
-        className={`${buttonClasses} rounded-r-md ${
-          isDisabled || !message.trim() || isRecording || isTranscribing
-            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-            : darkMode
-              ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300'
-              : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200'
-        }`}
-        disabled={isDisabled || !message.trim() || isRecording || isTranscribing}
-      >
-        Send
-      </button>
+
+      <div className="flex-grow ml-[34px] mr-[57px]">
+        <div className="relative w-full">
+          <textarea
+            ref={textareaRef}
+            rows={1}
+            value={isRecording || isTranscribing ? '' : message}
+            onChange={(e) => {
+              setMessage(e.target.value);
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+              }
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSubmit(e);
+              }
+            }}
+            className={`${inputClasses} ${largeFont ? 'text-base' : 'text-sm'} resize-none overflow-hidden min-h-[36px] max-h-[120px] w-full block`}
+            placeholder={
+              isDisabled
+                ? "Select a topic to start chatting"
+                : isRecording
+                  ? "Listening ..."
+                  : isTranscribing
+                    ? "Transcribing ..."
+                    : "Type a message or click the mic to speak..."
+            }
+            disabled={isDisabled || isRecording || isTranscribing}
+          />
+          {isRecording && (
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+              <span className="text-xs text-gray-400">{RECORDING_TIME_LIMIT - recordingTime}s</span>
+            </div>
+          )}
+          {isTranscribing && (
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+              <Loader className="animate-spin h-4 w-4 text-gray-400" />
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="absolute right-0 bottom-0 w-14">
+        <button
+          type="submit"
+          className={`${buttonClasses} rounded-r-md border-y border-r ${
+            isDisabled || !message.trim() || isRecording || isTranscribing
+              ? 'bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300'
+              : darkMode
+                ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-300 border-blue-600'
+                : 'bg-blue-500 text-white hover:bg-blue-600 focus:ring-blue-200 border-blue-500'
+          }`}
+          disabled={isDisabled || !message.trim() || isRecording || isTranscribing}
+        >
+          Send
+        </button>
+      </div>
     </form>
   );
 }
