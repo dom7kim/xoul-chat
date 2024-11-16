@@ -140,8 +140,8 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
         </button>
       </div>
 
-      <div className="flex-grow ml-[34px] mr-[57px]">
-        <div className="relative w-full">
+      <div className="flex-grow ml-9 mr-14">
+        <div className="relative w-full -ml-[1px]">
           <textarea
             ref={textareaRef}
             rows={1}
@@ -158,7 +158,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
                 handleSubmit(e);
               }
             }}
-            className={`${inputClasses} ${largeFont ? 'text-base' : 'text-sm'} resize-none overflow-hidden min-h-[36px] max-h-[120px] w-full block`}
+            className={`${inputClasses} ${largeFont ? 'text-base' : 'text-sm'} resize-none overflow-hidden min-h-[36px] max-h-[120px] w-full block border rounded-none`}
             placeholder={
               isDisabled
                 ? "Select a topic to start chatting"
@@ -183,7 +183,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
         </div>
       </div>
 
-      <div className="absolute right-0 bottom-0 w-14">
+      <div className="absolute right-0 bottom-0 w-14 -ml-[1px]">
         <button
           type="submit"
           className={`${buttonClasses} rounded-r-md border-y border-r ${
