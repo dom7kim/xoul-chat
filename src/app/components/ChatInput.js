@@ -166,7 +166,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
                   ? "Listening ..."
                   : isTranscribing
                     ? "Transcribing ..."
-                    : "Type a message or click the mic to speak..."
+                    : "Type or click the mic to speak..."
             }
             disabled={isDisabled || isRecording || isTranscribing}
           />
