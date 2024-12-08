@@ -5,12 +5,11 @@ import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 import CopyButton from './CopyButton';
 
-export default function ChatRoom({ questionData }) {
+export default function ChatRoom({ questionData, largeFont }) {
   const [messages, setMessages] = useState([]);
   const [selectedSession, setSelectedSession] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState('');
   const [darkMode, setDarkMode] = useState(false);
-  const [largeFont, setLargeFont] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef(null);
 
@@ -132,10 +131,6 @@ export default function ChatRoom({ questionData }) {
     }
   };
 
-  const toggleFontSize = () => {
-    setLargeFont(!largeFont);
-  };
-
   const handleStartOver = () => {
     if (selectedQuestion) {
       // Immediately clear all messages and set typing to true
@@ -226,15 +221,6 @@ Generated on ${new Date().toLocaleString()}
               aria-label="Select random topic"
             >
               🎲
-            </button>
-            <button
-              onClick={toggleFontSize}
-              className={`px-2 py-1 text-sm rounded ${
-                darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
-              } hover:bg-opacity-80 transition-colors`}
-              aria-label={largeFont ? "Decrease font size" : "Increase font size"}
-            >
-              {largeFont ? 'A-' : 'A+'}
             </button>
             <button
               onClick={() => setDarkMode(!darkMode)}
