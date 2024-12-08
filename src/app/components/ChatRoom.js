@@ -9,7 +9,7 @@ export default function ChatRoom({ questionData, largeFont }) {
   const [messages, setMessages] = useState([]);
   const [selectedSession, setSelectedSession] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState('');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef(null);
 
@@ -197,89 +197,103 @@ Generated on ${new Date().toLocaleString()}
       <div className={`px-1 py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-b`}>
-        <div className="flex justify-between items-center mb-2">
-          <select 
-            value={selectedSession} 
-            onChange={handleSessionChange} 
-            className={`flex-grow p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
-              darkMode 
-                ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
-                : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-            }`}
-          >
-            <option value="">Select a session</option>
-            {Object.keys(questionData).map(session => (
-              <option key={session} value={session}>{session}</option>
-            ))}
-          </select>
-          <div className="flex items-center space-x-2 ml-2">
-            <button
-              onClick={selectRandomTopic}
-              className={`px-2 py-1 text-sm rounded ${
-                darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
-              } hover:bg-opacity-80 transition-colors`}
-              aria-label="Select random topic"
-            >
-              🎲
-            </button>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className={`px-2 py-1 text-sm rounded ${
-                darkMode ? 'bg-gray-600 text-white' : 'bg-gray-500 text-gray-800'
-              } hover:bg-opacity-80 transition-colors`}
-              aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {darkMode ? '☀️' : '🌙'}
-            </button>
-          </div>
-        </div>
-        {selectedSession && (
-        <div className="relative flex items-center space-x-2">
-          <div className="relative flex-grow">
-            <select 
-              value={selectedQuestion} 
-              onChange={handleQuestionChange} 
-              className={`w-full p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
-                darkMode 
-                  ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
-                  : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-              }`}
-            >
-              <option value="">Select a question</option>
-              {questionData[selectedSession].questions.map((question, index) => (
-                <option key={index} value={question}>{question}</option>
-              ))}
-            </select>
-            <div className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 ${
-              darkMode ? 'text-white' : 'text-gray-700'
-            }`}>
-              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-              </svg>
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center space-x-2">
+            <div className="relative flex-grow">
+              <select 
+                value={selectedSession} 
+                onChange={handleSessionChange} 
+                className={`w-full p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
+                  darkMode 
+                    ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
+                    : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
+                }`}
+              >
+                <option value="">Select a session</option>
+                {Object.keys(questionData).map(session => (
+                  <option key={session} value={session}>{session}</option>
+                ))}
+              </select>
+              <div className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 ${
+                darkMode ? 'text-white' : 'text-gray-700'
+              }`}>
+                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                </svg>
+              </div>
+            </div>
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={selectRandomTopic}
+                className={`px-2 py-1 text-sm rounded ${
+                  darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
+                } hover:bg-opacity-80 transition-colors`}
+                aria-label="Select random topic"
+              >
+                🎲
+              </button>
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className={`px-2 py-1 text-sm rounded ${
+                  darkMode ? 'bg-gray-600 text-white' : 'bg-gray-500 text-gray-800'
+                } hover:bg-opacity-80 transition-colors`}
+                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+              >
+                {darkMode ? '☀️' : '🌙'}
+              </button>
             </div>
           </div>
-          <button
-            onClick={handleStartOver}
-            className={`px-2 py-1 text-sm rounded ${
-              darkMode 
-                ? 'bg-gray-600 text-white hover:bg-gray-500' 
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            } transition-colors`}
-            aria-label="Start over"
-          >
-            🔄
-          </button>
-          <CopyButton 
-            onClick={copyConversation} 
-            darkMode={darkMode}
-            className={`px-2 py-1 text-sm rounded ${
-              darkMode 
-                ? 'bg-gray-600 text-white hover:bg-gray-500' 
-                : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-            } transition-colors`}
-          />
+
+          {selectedSession && (
+            <div className="flex items-center space-x-2">
+              <div className="relative flex-grow">
+                <select 
+                  value={selectedQuestion} 
+                  onChange={handleQuestionChange} 
+                  className={`w-full p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
+                    darkMode 
+                      ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
+                      : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
+                  }`}
+                >
+                  <option value="">Select a question</option>
+                  {questionData[selectedSession].questions.map((question, index) => (
+                    <option key={index} value={question}>{question}</option>
+                  ))}
+                </select>
+                <div className={`pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 ${
+                  darkMode ? 'text-white' : 'text-gray-700'
+                }`}>
+                  <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={handleStartOver}
+                  className={`px-2 py-1 text-sm rounded ${
+                    darkMode 
+                      ? 'bg-gray-600 text-white hover:bg-gray-500' 
+                      : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                  } transition-colors`}
+                  aria-label="Start over"
+                >
+                  🔄
+                </button>
+                <CopyButton 
+                  onClick={copyConversation} 
+                  darkMode={darkMode}
+                  className={`px-2 py-1 text-sm rounded ${
+                    darkMode 
+                      ? 'bg-gray-600 text-white hover:bg-gray-500' 
+                      : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+                  } transition-colors`}
+                />
+              </div>
+            </div>
+          )}
         </div>
-      )}
       </div>
       <div ref={chatContainerRef} className="flex flex-col flex-grow overflow-hidden">
         <div className="flex-grow overflow-y-auto">
