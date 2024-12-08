@@ -193,7 +193,7 @@ Generated on ${new Date().toLocaleString()}
   return (
     <div className={`w-full flex flex-col ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
-    } rounded-lg overflow-hidden shadow-lg ${largeFont ? 'text-lg' : 'text-base'}`}>
+    } rounded-lg overflow-hidden shadow-lg`}>
       <div className={`px-1 py-2 ${
         darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
       } border-b`}>
@@ -201,18 +201,18 @@ Generated on ${new Date().toLocaleString()}
           <select 
             value={selectedSession} 
             onChange={handleSessionChange} 
-            className={`w-3/5 p-1 text-sm border rounded shadow-sm focus:ring ${
+            className={`flex-grow p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
               darkMode 
                 ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300' 
                 : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-            } ${largeFont ? 'text-base' : 'text-sm'}`}
+            }`}
           >
             <option value="">Select a session</option>
             {Object.keys(questionData).map(session => (
               <option key={session} value={session}>{session}</option>
             ))}
           </select>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 ml-2">
             <button
               onClick={selectRandomTopic}
               className={`px-2 py-1 text-sm rounded ${
@@ -239,11 +239,11 @@ Generated on ${new Date().toLocaleString()}
             <select 
               value={selectedQuestion} 
               onChange={handleQuestionChange} 
-              className={`w-full p-1 pr-8 border rounded shadow-sm focus:ring appearance-none ${
+              className={`w-full p-1 pr-8 text-sm border rounded shadow-sm focus:ring appearance-none ${
                 darkMode 
                   ? 'bg-gray-700 text-white border-gray-600 focus:border-blue-400 focus:ring-blue-300'
                   : 'bg-white text-gray-800 border-gray-300 focus:border-blue-500 focus:ring-blue-200'
-              } ${largeFont ? 'text-base' : 'text-sm'}`}
+              }`}
             >
               <option value="">Select a question</option>
               {questionData[selectedSession].questions.map((question, index) => (
@@ -291,9 +291,9 @@ Generated on ${new Date().toLocaleString()}
           <ChatInput onSendMessage={handleSendMessage} isDisabled={!selectedQuestion || isTyping} darkMode={darkMode} largeFont={largeFont} />
         </div>
       </div>
-      <div className={`text-center py-1 ${largeFont ? 'text-sm' : 'text-xs'} ${
+      <div className="text-center py-1 text-xs ${
         darkMode ? 'bg-gray-800 text-gray-400' : 'bg-gray-100 text-gray-600'
-      }`}>
+      }">
         © {new Date().getFullYear()} Dongwon at Xoul. All rights reserved.
       </div>
     </div>
