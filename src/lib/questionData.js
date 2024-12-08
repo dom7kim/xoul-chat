@@ -1,9 +1,14 @@
 // lib/questionData.js
-import fs from 'fs';
-import path from 'path';
 
-export function getQuestionData() {
-  const filePath = path.join(process.cwd(), 'public', 'questions.json');
-  const fileContents = fs.readFileSync(filePath, 'utf8');
-  return JSON.parse(fileContents);
+export async function getQuestionData() {
+  try {
+    const response = await fetch('/questions.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch questions');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error loading questions:', error);
+    return {};
+  }
 }
