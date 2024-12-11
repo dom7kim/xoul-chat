@@ -8,6 +8,7 @@ export default function Home() {
   const [questionData, setQuestionData] = useState({});
   const [largeFont, setLargeFont] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     async function loadQuestions() {
@@ -17,17 +18,22 @@ export default function Home() {
     loadQuestions();
 
     const savedMode = localStorage.getItem('darkMode');
-    setDarkMode(savedMode === 'true');
+    if (savedMode !== null) {
+      setDarkMode(savedMode === 'true');
+    }
+    setMounted(true);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('darkMode', darkMode);
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
+    if (mounted) {
+      localStorage.setItem('darkMode', darkMode);
+      if (darkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
-  }, [darkMode]);
+  }, [darkMode, mounted]);
 
   const handleToggleFontSize = () => {
     setLargeFont(!largeFont);
