@@ -226,7 +226,7 @@ Generated on ${new Date().toLocaleString()}
               <button
                 onClick={() => onToggleFontSize()}
                 className={`px-2 py-1 text-sm rounded w-8 ${
-                  darkMode ? 'bg-gray-600 text-white' : 'bg-gray-500 text-gray-800'
+                  darkMode ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-800'
                 } hover:bg-opacity-80 transition-colors`}
                 aria-label={largeFont ? "Decrease font size" : "Increase font size"}
               >

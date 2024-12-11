@@ -5,7 +5,7 @@ import { getQuestionData } from '@/lib/questionData';
 import { Moon, Sun } from 'lucide-react';
 
 export default function Home() {
-  const [questionData, setQuestionData] = useState(null);
+  const [questionData, setQuestionData] = useState({});
   const [largeFont, setLargeFont] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
@@ -32,10 +32,6 @@ export default function Home() {
   const handleToggleFontSize = () => {
     setLargeFont(!largeFont);
   };
-
-  if (!questionData) {
-    return <div>Loading...</div>;
-  }
 
   return (
     <main className="flex flex-col min-h-screen w-full max-w-4xl mx-auto">
