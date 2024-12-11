@@ -5,11 +5,16 @@ import ChatMessages from './ChatMessages';
 import ChatInput from './ChatInput';
 import CopyButton from './CopyButton';
 
-export default function ChatRoom({ questionData, largeFont }) {
+export default function ChatRoom({ 
+  questionData, 
+  largeFont, 
+  darkMode, 
+  setDarkMode,
+  onToggleFontSize 
+}) {
   const [messages, setMessages] = useState([]);
   const [selectedSession, setSelectedSession] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState('');
-  const [darkMode, setDarkMode] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef(null);
 
@@ -44,20 +49,6 @@ export default function ChatRoom({ questionData, largeFont }) {
 
     return () => window.removeEventListener('resize', adjustChatContainerHeight);
   }, []);
-
-  useEffect(() => {
-    const savedMode = localStorage.getItem('darkMode');
-    setDarkMode(savedMode === 'true');
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('darkMode', darkMode);
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, [darkMode]);
 
   const selectRandomTopic = () => {
     const sessions = Object.keys(questionData);
@@ -233,13 +224,13 @@ Generated on ${new Date().toLocaleString()}
                 🎲
               </button>
               <button
-                onClick={() => setDarkMode(!darkMode)}
-                className={`px-2 py-1 text-sm rounded ${
+                onClick={() => onToggleFontSize()}
+                className={`px-2 py-1 text-sm rounded w-8 ${
                   darkMode ? 'bg-gray-600 text-white' : 'bg-gray-500 text-gray-800'
                 } hover:bg-opacity-80 transition-colors`}
-                aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+                aria-label={largeFont ? "Decrease font size" : "Increase font size"}
               >
-                {darkMode ? '☀️' : '🌙'}
+                {largeFont ? 'A-' : 'A+'}
               </button>
             </div>
           </div>
