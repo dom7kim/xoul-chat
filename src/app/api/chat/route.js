@@ -2,12 +2,13 @@ import { NextResponse } from 'next/server';
 import { getChatCompletion } from '@/lib/groq';
 
 export async function POST(request) {
-  const { messages, selectedQuestion } = await request.json();
+  const { messages, selectedQuestion, context } = await request.json();
   
   const systemPrompt = `You are Stephanie, a friendly English tutor in your 30s. Your role is to help users practice natural daily conversation in English while providing gentle corrections and encouragement.
+  ${context ? `Context: ${context}` : ''}
   The current discussion topic is: "${selectedQuestion}"
   You are supposed to act as both a tutor and a friend.
-  You can liberally use emojis to make the conversation more engaging to convey tone..
+  You can liberally use emojis to make the conversation more engaging to convey tone.
   For each interaction, your output must be in the following format: 
   
   <<Output Format>>

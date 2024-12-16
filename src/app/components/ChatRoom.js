@@ -102,7 +102,8 @@ export default function ChatRoom({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
           messages: [...messages, newUserMessage],
-          selectedQuestion
+          selectedQuestion,
+          context: selectedSession ? questionData[selectedSession].context : ''
         }),
       });
       const data = await response.json();

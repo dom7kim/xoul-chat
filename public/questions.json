@@ -1,47 +1,47 @@
 {
-  "Session 1: Truth or Trick: Guess the Real Story! 🎭": {
-    "Instruction": "",
+  "Session 1: The Magic of Christmas 🎄": {
+    "context": "Christmas is just around the corner.",
     "questions": [
-      "What’s a unique skill or talent you have that surprises people?",
-      "Have you ever met a celebrity or famous person? Who, and how did it happen?",
-      "What’s the strangest or most exotic food you’ve ever tried?",
-      "Have you ever done something adventurous, like bungee jumping or skydiving?",
-      "What’s the most unusual or remote place you’ve ever visited?",
-      "Have you ever won a competition or achieved something unexpectedly?",
-      "Do you have a secret hobby or quirky interest?",
-      "Have you ever experienced a strange or hilarious accident?",
-      "What’s the craziest coincidence that’s ever happened to you?",
-      "Is there an English word or phrase you learned in a funny or surprising way?"
+      "What’s the most special Christmas memory you’ve ever had?",
+      "How do you usually celebrate Christmas, and has it changed over the years?",
+      "Is there a new Christmas tradition you’d like to create for yourself or your family?",
+      "What’s the most thoughtful Christmas gift you’ve ever received? Why did it mean so much?",
+      "Do you prefer a quiet Christmas at home or a big gathering with friends and family? Why?",
+      "Which Christmas movie, song, or book always puts you in the holiday spirit?",
+      "How do you feel about decorating for Christmas? Does it excite you or feel like a chore?",
+      "If you could spend Christmas anywhere in the world, where would it be, and why?",
+      "Do you think there’s something magical about Christmas? What makes it feel special to you?",
+      "What’s your favorite Christmas dish or dessert, and why do you love it?"
     ]
   },
-  "Session 2: The Subscription Boom: Convenience or Overload? 🎟️": {
-    "Instruction": "",
+  "Session 2: The Power of a Compliment 😊": {
+    "context": "",
     "questions": [
-      "What are some subscription services you currently use? How do they add value to your life?",
-      "Have you ever subscribed to something but later felt it wasn’t worth the cost? What made you cancel it?",
-      "How do you feel about the shift from owning products to paying for access, like streaming platforms or rental services?",
-      "Subscription fatigue is a growing issue. Do you feel overwhelmed by the number of subscriptions available today? Why or why not?",
-      "Some people forget about subscriptions they no longer use. Has this ever happened to you? How did you address it?",
-      "Do you think subscription-based services are more convenient than traditional one-time purchases? Why or why not?",
-      "In your opinion, how could subscription companies improve their offerings to retain customers better?",
-      "How do you balance the financial costs of multiple subscriptions with their benefits?",
-      "Have you noticed any changes in your spending habits because of subscription services? If so, what are they?",
-      "Looking ahead, do you think the subscription economy will continue to grow, or will people start moving away from it? Why do you think so?"
+      "What’s the most meaningful compliment you’ve ever received, and why did it stand out?",
+      "Do you find giving compliments easy, or does it feel awkward? Why?",
+      "What’s the most unexpected compliment you’ve ever been given?",
+      "How do you usually feel when someone compliments your abilities or achievements?",
+      "Is there someone in your life who deserves a compliment you haven’t given yet?",
+      "Do you think specific compliments are more impactful than general ones? Can you give an example?",
+      "How are compliments in Korean culture different from those in other cultures you’ve experienced?",
+      "Can you remember a time when a compliment you gave brought someone joy? What did you say?",
+      "Have you ever received a backhanded compliment? How did you handle it?",
+      "What kind of compliment do you wish people would give you more often?"
     ]
   },
-  "Session 3: Sitcoms: A Fading Legacy or a New Beginning? 📺": {
-    "Instruction": "",
+  "Session 3: The Gift of Giving and Receiving 🎁": {
+    "context": "",
     "questions": [
-      "What are some of your favorite sitcoms from the past? Why do you think they left such a strong impression on you?",
-      "Sitcoms like *Friends* and *The Office* were cultural phenomena. Do you think any recent shows have had a similar impact? Why or why not?",
-      "How do you feel about the differences between sitcoms with laugh tracks, like *Friends*, and those without, like *The Office*? Which style do you prefer and why?",
-      "Streaming platforms have transformed how we watch TV. Do you think this has helped or hurt the popularity of sitcoms?",
-      "Many classic sitcoms focused on family or workplace humor. Do you think these themes are still relevant today, or should sitcoms explore new settings and ideas?",
-      "Sitcoms often reflect societal norms and humor of their time. Do you think older sitcoms hold up today, or do they feel outdated? Why?",
-      "Many modern comedies focus on blending humor with deeper emotional storytelling. Do you prefer this approach, or do you miss the simplicity of classic sitcoms?",
-      "What role do you think nostalgia plays in keeping older sitcoms like *Friends* popular among younger generations?",
-      "If you could bring back one classic sitcom with a modern twist, which would it be, and how would you update it for today’s audience?",
-      "Looking at the future of comedy, do you think sitcoms will make a comeback, or will new formats continue to dominate? Why do you feel that way?"
+      "What’s the most unforgettable gift you’ve ever received, and what made it so special?",
+      "Do you enjoy giving gifts or receiving them more? What makes it meaningful for you?",
+      "What’s the most creative or thoughtful gift you’ve ever given to someone?",
+      "Have you ever received a gift that wasn’t quite what you expected? How did you react?",
+      "Do you prefer handmade gifts or store-bought ones? What’s more meaningful to you?",
+      "What’s the most unusual or surprising gift you’ve ever gotten? How did you feel about it?",
+      "How do you choose the perfect gift for someone? Do you follow a specific process?",
+      "If money were no object, what gift would you give to someone you care about?",
+      "Have you ever received a surprise gift? What was it, and how did it make you feel?",
+      "Do you believe the thought behind a gift is more important than the gift itself? Why or why not?"
     ]
   }
 }
