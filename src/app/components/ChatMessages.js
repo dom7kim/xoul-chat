@@ -90,7 +90,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
     <div className={`space-y-2 overflow-y-auto max-h-full px-1 py-2 ${largeFont ? 'text-lg' : 'text-base'}`}>
       {messages.length === 0 ? (
         <p className={`text-center ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-          No messages yet. Start a conversation!
+          Select a session and question to start,<br />or click the 🎲 for a random question!
         </p>
       ) : (
         messages.map(renderMessage)
