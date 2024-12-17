@@ -158,7 +158,7 @@ export default function ChatInput({ onSendMessage, isDisabled, darkMode, largeFo
                 handleSubmit(e);
               }
             }}
-            className={`${inputClasses} ${largeFont ? 'text-lg' : 'text-base'} resize-none overflow-hidden min-h-[36px] max-h-[120px] w-full block border rounded-none`}
+            className={`${inputClasses} text-base resize-none overflow-hidden min-h-[36px] max-h-[120px] w-full block border rounded-none`}
             placeholder={
               isDisabled
                 ? "Select a topic to start chatting"
