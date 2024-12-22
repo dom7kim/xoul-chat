@@ -1,47 +1,47 @@
 {
-  "Session 1: The Magic of Christmas 🎄": {
-    "context": "Christmas is just around the corner.",
+  "Session 1: Looking Back at 2024 - Memories & Reflections 🌟": {
+    "context": "The end of 2024 is coming soon. Let's look back at 2024 and reflect on the year.",
     "questions": [
-      "What’s the most special Christmas memory you’ve ever had?",
-      "How do you usually celebrate Christmas, and has it changed over the years?",
-      "Is there a new Christmas tradition you’d like to create for yourself or your family?",
-      "What’s the most thoughtful Christmas gift you’ve ever received? Why did it mean so much?",
-      "Do you prefer a quiet Christmas at home or a big gathering with friends and family? Why?",
-      "Which Christmas movie, song, or book always puts you in the holiday spirit?",
-      "How do you feel about decorating for Christmas? Does it excite you or feel like a chore?",
-      "If you could spend Christmas anywhere in the world, where would it be, and why?",
-      "Do you think there’s something magical about Christmas? What makes it feel special to you?",
-      "What’s your favorite Christmas dish or dessert, and why do you love it?"
+      "If your 2024 had to be turned into a book or movie, what would the title be, and what would be the most dramatic scene? Share the story behind your choice.",
+      "What were three unexpected joys or pleasant surprises you experienced this year? How did they impact you?",
+      "Think about your biggest personal change from January to December - what transformation have you noticed in yourself? What triggered this change?",
+      "Among all your achievements this year, which one makes you feel the most proud? Tell us the story behind it.",
+      "Who were the most valuable people in your life this year? How did they influence your 2024?",
+      "What was the most challenging obstacle you faced this year? How did you overcome it?",
+      "If you could travel back to the beginning of 2024, what advice would you give to your past self? Why would this advice be important?",
+      "What was your biggest 'time waster' this year? Looking back, what would you have done differently?",
+      "Think about your favorite memory from 2024 - what stands out most about it? Share the details that made it special.",
+      "Looking at your growth this year - emotionally, professionally, or personally - which area do you feel you've improved the most? What helped you grow?"
     ]
   },
-  "Session 2: The Power of a Compliment 😊": {
-    "context": "",
+  "Session 2: Curiosity: The Spark That Ignites Our Minds 💡": {
+    "context": "Curiosity is the spark that ignites our minds. It's the drive to explore, learn, and grow. Let's share our curiosity stories.",
     "questions": [
-      "What’s the most meaningful compliment you’ve ever received, and why did it stand out?",
-      "Do you find giving compliments easy, or does it feel awkward? Why?",
-      "What’s the most unexpected compliment you’ve ever been given?",
-      "How do you usually feel when someone compliments your abilities or achievements?",
-      "Is there someone in your life who deserves a compliment you haven’t given yet?",
-      "Do you think specific compliments are more impactful than general ones? Can you give an example?",
-      "How are compliments in Korean culture different from those in other cultures you’ve experienced?",
-      "Can you remember a time when a compliment you gave brought someone joy? What did you say?",
-      "Have you ever received a backhanded compliment? How did you handle it?",
-      "What kind of compliment do you wish people would give you more often?"
+      "When was the last time your curiosity led you to discover something fascinating? What made you want to explore that particular topic?",
+      "Some people say curiosity can be both a blessing and a curse. Have you ever experienced a situation where your curiosity got you into trouble or led to an unexpected adventure?",
+      "Research shows that curious people tend to have better mental well-being and problem-solving skills. How do you think your level of curiosity has shaped your personal growth?",
+      "If you could instantly gain complete knowledge about any one topic, what would it be and why?",
+      "Think about your childhood - what kinds of questions did you constantly ask? How has your curiosity evolved as you've grown older?",
+      "Studies show that curiosity releases dopamine in our brains, similar to other pleasurable activities. What topics or activities make you feel most excited to learn about?",
+      "How do you usually satisfy your curiosity in this digital age? Do you think having instant access to information has made us more or less curious?",
+      "Have you noticed any cultural differences in how curiosity is viewed or expressed between Korea and other countries you've experienced?",
+      "Research suggests that uncertainty at moderate levels triggers the highest curiosity. Can you share a time when not knowing something completely drove you to learn more?",
+      "If you could design a perfect learning environment that nurtures curiosity, what would it look like? How would it be different from traditional education systems?"
     ]
   },
-  "Session 3: The Gift of Giving and Receiving 🎁": {
-    "context": "",
+  "Session 3: Living with AI - Our Personal Experiences and Thoughts 🤖": {
+    "context": "AI is everywhere. It's in our phones, our computers, and even our homes. Let's reflect on how AI has affected our daily lives.",
     "questions": [
-      "What’s the most unforgettable gift you’ve ever received, and what made it so special?",
-      "Do you enjoy giving gifts or receiving them more? What makes it meaningful for you?",
-      "What’s the most creative or thoughtful gift you’ve ever given to someone?",
-      "Have you ever received a gift that wasn’t quite what you expected? How did you react?",
-      "Do you prefer handmade gifts or store-bought ones? What’s more meaningful to you?",
-      "What’s the most unusual or surprising gift you’ve ever gotten? How did you feel about it?",
-      "How do you choose the perfect gift for someone? Do you follow a specific process?",
-      "If money were no object, what gift would you give to someone you care about?",
-      "Have you ever received a surprise gift? What was it, and how did it make you feel?",
-      "Do you believe the thought behind a gift is more important than the gift itself? Why or why not?"
+      "How often do you interact with AI in your daily life, and which AI tools or applications do you find yourself using the most frequently?",
+      "Can you share a memorable experience where an AI tool like ChatGPT or a virtual assistant either helped you solve a problem or created an amusing situation?",
+      "When you compare your life now to a few years ago, what are the most noticeable changes that AI has brought to your daily routines?",
+      "What concerns or worries do you have about the increasing presence of AI in our lives?",
+      "If you could design a new AI application to make your life easier, what would it do and why?",
+      "How has AI impacted your work or study life, and do you feel it has made things easier or more challenging?",
+      "What's your opinion on AI-powered personalized recommendations (like those on Netflix or shopping websites) - do you find them helpful or intrusive?",
+      "If you could choose between a human service provider and an AI for certain tasks (like customer service or health consultations), which would you prefer and why?",
+      "How do you imagine AI will change our daily lives in the next 5-10 years?",
+      "What's the most surprising or unexpected way you've seen AI being used in your community or workplace?"
     ]
   }
 }
