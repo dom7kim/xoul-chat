@@ -9,7 +9,7 @@ Xoul Chat is an interactive English tutoring application developed for the Xoul 
 Xoul English Meetup is a weekly gathering in Korea where participants come together to practice and improve their English skills. The meetup:
 - Meets every Saturday for 2 hours
 - Focuses on natural conversation practice
-- Welcomes learners of all levels
+- Requires advanced English proficiency (IELTS 7.0 or higher)
 - Creates a supportive environment for English practice
 
 Join our meetup: [Xoul English Meetup](https://somoim.co.kr/5a36993a-fd4f-11ed-8743-0af85eab1c8b1)
