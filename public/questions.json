@@ -1,47 +1,32 @@
 {
-  "Session 1: Breaking the Ice - The Art of Approaching Someone 💬": {
-    "context": "Breaking the ice is the first step to making new friends. Let's share our ice-breaking stories.",
+  "Session 1: A Bad Workman Blames His Tools 🛠️": {
+    "context": "The proverb 'A bad workman blames his tools' reminds us of the importance of personal responsibility in achieving success. While tools are essential for tasks in cooking, sports, hobbies, or work, this saying suggests that skill and attitude matter more than the tools themselves. But is this always true? In this session, let’s explore the balance between skill and equipment, share experiences with tools in different areas of life, and discuss whether we agree with this proverb.",
     "questions": [
-      "Have you ever approached someone you were interested in? How did it go?",
-      "What do you think makes a good 'first impression' when meeting someone new?",
-      "How do cultural differences influence how people approach one another?",
-      "Have you ever been approached by someone in a memorable or unusual way? What happened?",
-      "What are some common fears or challenges people face when trying to 'break the ice'?",
-      "Do you think people rely too much on social media or dating apps instead of face-to-face interactions? Why or why not?",
-      "What are some good conversation starters you’ve used or heard of?",
-      "How do you react when someone approaches you in public? Do you enjoy it or find it uncomfortable?",
-      "What are your thoughts on the phrase 'love at first sight'? Is it realistic or just a romantic idea?",
-      "Can you share a story about a time you approached someone, or someone approached you, that had an unexpected outcome?"
+      "Have you ever heard the saying 'A bad workman blames his tools' before? What do you think it means?",
+      "Can you recall a time when you struggled with a task because of poor tools or equipment? Did you find a way to work around it?",
+      "Do you agree with the proverb? Or do you think having the right tools is just as important as skill? Why?",
+      "In your opinion, are there situations where blaming tools might be justified? For example, in professional settings or creative work?",
+      "If you could invent the perfect tool to make one task in your life easier, what would it be and why?"
     ]
   },
-  "Session 2: Animation and Comics 🎨": {
-    "context": "Animation and comics are a great way to express creativity and imagination. Let's share our favorite animation and comic stories.",
+  "Session 2: Physical Spaces in the Digital Era 📚✨": {
+    "context": "In a time when digital technology dominates many aspects of life, the value of physical spaces remains significant. From bookstores thriving in the face of e-commerce to the unique sensory and social experiences offered by real-world environments, physical spaces continue to play a vital role in fostering connection, creativity, and community. Barnes & Noble's recent success in expanding its physical bookstores highlights how these spaces can adapt and thrive even in the digital age.",
     "questions": [
-      "What is your earliest memory of watching an animated show or reading a comic? How did it make you feel?",
-      "Do you have a favorite animated movie or comic book? What makes it special to you?",
-      "How do you think animation and comics have changed over the years? Do you prefer older or newer styles?",
-      "Are there any animated shows or comics that influenced your childhood? How did they shape your imagination or interests?",
-      "What are some differences between animations or comics from different countries? Have you noticed unique cultural elements in them?",
-      "Do you think animation and comics are only for children, or can they appeal to adults too? Why?",
-      "Have you ever tried creating your own comic or animation? If not, what kind of story would you create if given the chance?",
-      "How do animations and comics use visuals and storytelling to convey emotions or messages? Can you share an example that impressed you?",
-      "What role do superheroes play in comics and animations? Do you have a favorite superhero or villain, and why?",
-      "How do you think animations and comics will evolve in the future with advancements in technology like AI or virtual reality?"
+      "How often do you visit physical spaces like bookstores, libraries, or cafes? What do you enjoy most about them?",
+      "Have you ever had a memorable experience in a physical space that couldn't have happened online? What made it special?",
+      "Why do you think physical spaces like bookstores are still relevant despite the convenience of digital alternatives?",
+      "In your opinion, what can digital platforms learn from physical spaces to improve their user experience?",
+      "If you could design your own ideal physical space (e.g., a bookstore, café, or workspace), what would it look like and why?"
     ]
   },
-  "Session 3: Unlocking the Secrets of Muscle Memory 🏋️‍♂️": {
-    "context": "Muscle memory is the ability of the body to remember how to perform a movement or skill without conscious thought. Let's share our muscle memory stories.",
+  "Session 3: The Dupe Revolution - Why Imitations Are Taking Over 🎭": {
+    "context": "Dupes, or affordable alternatives to high-end products, have gained immense popularity, especially among younger generations. Unlike counterfeits, dupes don’t claim to be original but offer similar aesthetics or functionality at a fraction of the cost. This trend is fueled by economic challenges, social media influence, and a shift in consumer values. Let’s explore what drives this phenomenon and how it reflects broader societal changes.",
     "questions": [
-      "What is your understanding of muscle memory? Can you think of any examples from your daily life where you rely on it?",
-      "Have you ever learned a skill that became automatic over time, like typing or playing an instrument? How did it feel when it became second nature?",
-      "Muscle memory often requires repetition. What is something you’ve practiced repeatedly to master, and how did the process shape your experience?",
-      "Have you ever experienced losing a skill after a long break but regaining it quickly? What do you think helped you recover it so fast?",
-      "How does muscle memory differ from other types of memory, like remembering facts or events? Why do you think some skills are easier to retain than others?",
-      "In what ways do you think muscle memory can be beneficial in sports or physical activities? Can you share any personal stories about this?",
-      "Have you ever been surprised by your ability to perform a task without thinking about it? How does this relate to the concept of 'autopilot' in muscle memory?",
-      "Do you believe mental visualization can help improve muscle memory? Have you tried this technique before, and what were the results?",
-      "How do you think muscle memory might play a role in overcoming challenges, such as recovering from an injury or learning new habits?",
-      "If you could develop muscle memory for any skill instantly, what would it be and why?"
+      "Have you ever heard of the term dupes before? If yes, what comes to mind when you hear it?",
+      "Have you ever purchased something because it was a more affordable alternative to a high-end product? How did you feel about the experience?",
+      "Why do you think dupes have become so popular among younger generations? What role do social media and influencers play in this trend?",
+      "Do you think choosing dupes over original products is purely about saving money, or does it reflect deeper values like creativity, individuality, or practicality?",
+      "If you could create your own dupe of any product—fashion, tech, or beauty—what would it be and why?"
     ]
   }
 }
