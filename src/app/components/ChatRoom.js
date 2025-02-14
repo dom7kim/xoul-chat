@@ -136,13 +136,18 @@ export default function ChatRoom({
       setMessages([]);
       setIsTyping(true);
 
-      // Add the initial message and set typing to false after a delay
+      // Add the initial message in JSON format and set typing to false after a delay
       setTimeout(() => {
-        setMessages([
-          { role: 'assistant', content: `[[Let's start over!]]\n\n- ${selectedQuestion}` }
-        ]);
+        const initialMessage = {
+          role: 'assistant',
+          content: JSON.stringify({
+            feedback: "Let's start over!",
+            response: `${selectedQuestion}`
+          })
+        };
+        setMessages([initialMessage]);
         setIsTyping(false);
-      }, 500); // Single delay of 0.5 second
+      }, 500);
     }
   };
 
