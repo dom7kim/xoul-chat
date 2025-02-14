@@ -59,18 +59,19 @@ export default function ChatRoom({
     const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
     setSelectedQuestion(randomQuestion);
 
-    // Clear previous messages when a new topic is selected
-    setMessages([]);
-
-    // Optionally, you can add an initial AI message here
+    // Clear previous messages and set initial message in JSON format
     setIsTyping(true);
     setTimeout(() => {
       setIsTyping(false);
-      setMessages([{ 
-        role: 'assistant', 
-        content: `[[Let's get started!]]\n\n- ${randomQuestion}` 
-      }]);
-    }, 500 + Math.random() * 500); // Random delay between 0.5-1 seconds
+      const initialMessage = {
+        role: 'assistant',
+        content: JSON.stringify({
+          feedback: "Let's get started!",
+          response: `${randomQuestion}`
+        })
+      };
+      setMessages([initialMessage]);
+    }, 500 + Math.random() * 500);
   };
 
   const handleSessionChange = (e) => {
@@ -83,9 +84,15 @@ export default function ChatRoom({
     const newQuestion = e.target.value;
     setSelectedQuestion(newQuestion);
     if (newQuestion) {
-      setMessages([
-        { role: 'assistant', content: `[[Let's get started!]]\n\n- ${newQuestion}` }
-      ]);
+      // Create initial message in JSON format
+      const initialMessage = {
+        role: 'assistant',
+        content: JSON.stringify({
+          feedback: "Let's get started!",
+          response: `${newQuestion}`
+        })
+      };
+      setMessages([initialMessage]);
     } else {
       setMessages([]);
     }

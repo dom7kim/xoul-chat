@@ -26,27 +26,48 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
   };
 
   const renderMessage = (message, index) => {
-    const feedbackMatch = message.content.match(/\[\[(.*?)\]\]/s);
-    const feedback = feedbackMatch ? feedbackMatch[1].trim() : null;
-    const content = message.content.replace(/\[\[.*?\]\]/s, '').trim();
+    if (message.role === 'user') {
+      return (
+        <div key={index} className={`p-2 rounded-lg ${
+          darkMode ? 'bg-blue-900 ml-auto' : 'bg-blue-100 ml-auto'
+        } max-w-[90%] shadow`}>
+          <p className={`font-bold ${
+            darkMode ? 'text-blue-300' : 'text-blue-700'
+          }`}>
+            You:
+          </p>
+          <p className={`${
+            darkMode ? 'text-gray-300' : 'text-gray-700'
+          } whitespace-pre-wrap`}>
+            {message.content}
+          </p>
+        </div>
+      );
+    }
+
+    // Parse assistant's response as JSON
+    let feedback = '';
+    let response = '';
+    try {
+      const content = JSON.parse(message.content);
+      feedback = content.feedback;
+      response = content.response;
+    } catch (error) {
+      // Fallback for non-JSON responses
+      response = message.content;
+    }
 
     return (
       <div key={index} className={`p-2 rounded-lg ${
-        message.role === 'user' 
-          ? darkMode ? 'bg-blue-900 ml-auto' : 'bg-blue-100 ml-auto'
-          : darkMode ? 'bg-gray-700' : 'bg-gray-100'
+        darkMode ? 'bg-gray-700' : 'bg-gray-100'
       } max-w-[90%] shadow`}>
         <div className="flex justify-between items-start mb-2">
           <p className={`font-bold ${
-            message.role === 'user'
-              ? darkMode ? 'text-blue-300' : 'text-blue-700'
-              : darkMode ? 'text-green-300' : 'text-green-700'
+            darkMode ? 'text-green-300' : 'text-green-700'
           }`}>
-            {message.role === 'user' ? 'You' : 'Stephanie'}:
+            Stephanie:
           </p>
-          {message.role === 'assistant' && (
-            <PlayButton text={content} darkMode={darkMode} />
-          )}
+          <PlayButton text={response} darkMode={darkMode} />
         </div>
         {feedback && (
           <div className="mb-2">
@@ -80,7 +101,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
         <p className={`${
           darkMode ? 'text-gray-300' : 'text-gray-700'
         } whitespace-pre-wrap`}>
-          {content}
+          {response}
         </p>
       </div>
     );
