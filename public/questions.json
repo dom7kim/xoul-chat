@@ -1,32 +1,37 @@
 {
-  "Session 1: Too Much of a Good Thing 🌟": {
-    "context": "The saying 'Too much of a good thing can be bad' reminds us that even the most enjoyable or beneficial aspects of life can turn negative if taken to excess. From overeating favorite foods to overworking or even being overly happy, this concept applies to many areas of life. While some may see this as a call for moderation, others might question whether it's possible to truly have 'too much' of something positive. Let’s explore this idea together and share our thoughts and experiences.",
+  "Session 1: Would You Rather? Let's Balance the Choices! 🎭": {
+    "context": "Welcome to a fun and thought-provoking session of 'Would You Rather' and balance game questions! These scenarios will challenge your preferences, spark laughter, and reveal interesting insights about each other. Feel free to improvise or add your own twists as we explore these creative dilemmas together.",
     "questions": [
-      "Have you ever heard the phrase 'too much of a good thing'? What does it mean to you?",
-      "Can you share an example from your life where something you enjoyed or valued became overwhelming or harmful because there was too much of it?",
-      "Do you agree that moderation is key in life, or do you think some things are exceptions to this rule? Why?",
-      "Why do you think people sometimes struggle to recognize when they've had 'too much' of something good? How can we find balance?",
-      "If you could choose one thing in your life that you'd never grow tired of, no matter how much of it you had, what would it be? Why?"
+      "Would you rather be the worst member of a top company or K-pop idol group, or the best member of a much less competent or popular one? (Why?)",
+      "Would you rather date someone who texts you every hour or only once or twice a day? (How would this affect your relationship?)",
+      "Would you rather break up with a friend if you introduced them to their future spouse and they only gave you a simple thank-you lunch as a gesture of gratitude, or let it go even though you expected a more significant gift?",
+      "Would you rather travel overseas with friends while working remotely every night, or spend the entire trip taking care of a friend who got sick from the very beginning of the journey?",
+      "Would you prefer knowing if your partner had lived with their ex, or never finding out at all?",
+      "Would you rather have unlimited time but limited money, or unlimited money but limited time? (What would you prioritize?)",
+      "Would you rather always feel slightly hungry or slightly tired? (Which is easier to tolerate?)",
+      "Would you rather lose all your photos or all your saved messages on your phone? (What holds more sentimental value for you?)",
+      "Would you rather live in a world without music or without movies? (How would this change your life?)",
+      "Would you rather have the ability to pause time for 10 seconds whenever you want, or rewind time by 10 seconds once a day?"
     ]
   },
-  "Session 2: Advice to Your Younger Self 🌟": {
-    "context": "Reflecting on advice to your younger self can be a deeply personal and meaningful exercise. It allows us to revisit our past experiences, identify lessons learned, and appreciate how far we’ve come. This session invites you to share insights, regrets, and wisdom you wish you had known earlier in life. By discussing this, we can connect over shared experiences and inspire each other to embrace growth and self-compassion.",
+  "Session 2: Nostalgia Meets Modernity: The Retro Tech Revival 📸": {
+    "context": "In recent years, retro technology has made a surprising comeback among younger generations, particularly Gen Z. From old iPhones and digital cameras to Walkmans and vinyl records, these items are being embraced not just for their functionality but for the nostalgia and aesthetic they evoke. This trend, often referred to as 'youngtro,' reflects a desire to blend the charm of the past with the conveniences of the present. Let’s explore your thoughts and experiences with this fascinating cultural shift.",
     "questions": [
-      "If you could go back in time, what is one piece of advice you would give your younger self? Why does this feel important now?",
-      "What is something you used to worry about a lot when you were younger that seems less significant now? How has your perspective changed?",
-      "Is there a specific moment or decision in your past where you wish you had acted differently? What would you do instead if given the chance?",
-      "Reflecting on your journey, what’s one lesson you’ve learned that you think everyone should know? How did this lesson shape who you are today?",
-      "Imagine writing a letter to your younger self—what would the opening line be, and what emotions or thoughts would you want to convey?"
+      "What’s your favorite piece of retro technology, if any? Why do you think it appeals to you or others?",
+      "Have you ever used an older gadget like a vintage camera or flip phone? How did it compare to modern devices?",
+      "Why do you think younger generations are drawn to retro tech, even though modern technology is often more advanced?",
+      "Do you think nostalgia plays a significant role in shaping trends today? Can you share an example from your own life or observations?",
+      "If you could bring back any old gadget or trend from the past, what would it be and why?"
     ]
   },
-  "Session 3: The Many Faces of You: Exploring Multiple Personas 🌟": {
-    "context": "Have you ever noticed how you act differently at work, home, or with friends? This isn't unusual—many people adopt different personas depending on the situation. Some see this as a natural and necessary part of life, while others worry it might lead to losing touch with their authentic self. Let’s explore the idea of multiple personas, why they exist, and whether they help or hinder us in navigating our lives.",
+  "Session 3: Education, Social Status, and Parental Expectations in Modern Society 🎓": {
+    "context": "In many societies, education is seen as a pathway to success, but in South Korea, it often becomes a defining aspect of family identity and social status. The recent viral parody of 'Daechi moms' highlighted the pressures parents face to secure the best opportunities for their children, as well as the role of luxury goods in projecting success. This session explores how education, societal expectations, and materialism intersect, encouraging you to reflect on your own experiences and perspectives.",
     "questions": [
-      "When do you notice yourself acting differently depending on the situation? (For example, at work versus at home.)",
-      "Do you think having different personas for different roles or environments is helpful or harmful? Why?",
-      "Have you ever felt like one of your personas doesn’t reflect your true self? How did that make you feel?",
-      "Why do you think people naturally adapt their behavior in different social settings? Is it a survival skill or something else?",
-      "If you could combine all your personas into one 'true self,' what would that look like? Would it be freeing or challenging?"
+      "How do you think education shapes social status here in Seoul? Do you notice differences between neighborhoods or communities?",
+      "Have you ever felt pressure to meet societal expectations, either in education or other areas? How did you deal with it?",
+      "Why do you think some people use material goods, like luxury fashion, to express their identity or social standing? Do you think this is effective or problematic?",
+      "The parody video sparked both laughter and discomfort. Why do you think humor can be such a powerful way to critique societal norms? Can you share an example of satire that resonated with you?",
+      "If you were a parent in a highly competitive environment like Daechi-dong, how would you balance your child's academic success with their happiness and well-being?"
     ]
   }
 }
