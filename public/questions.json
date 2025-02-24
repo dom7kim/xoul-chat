@@ -1,37 +1,32 @@
 {
-  "Session 1: Would You Rather? Let's Balance the Choices! 🎭": {
-    "context": "Welcome to a fun and thought-provoking session of 'Would You Rather' and balance game questions! These scenarios will challenge your preferences, spark laughter, and reveal interesting insights about each other. Feel free to improvise or add your own twists as we explore these creative dilemmas together.",
+  "Session 1: Curiosity Killed the Cat: Risk or Reward? 🐾": {
+    "context": "The proverb 'Curiosity killed the cat' has long been a cautionary tale about the dangers of excessive curiosity. However, its lesser-known continuation, 'but satisfaction brought it back,' suggests a more nuanced perspective: curiosity, while risky, can lead to valuable discoveries and personal growth. This session explores the dual nature of curiosity—its potential to both harm and enrich—and invites you to reflect on how curiosity shapes your life and decisions.",
     "questions": [
-      "Would you rather be the worst member of a top company or K-pop idol group, or the best member of a much less competent or popular one? (Why?)",
-      "Would you rather date someone who texts you every hour or only once or twice a day? (How would this affect your relationship?)",
-      "Would you rather break up with a friend if you introduced them to their future spouse and they only gave you a simple thank-you lunch as a gesture of gratitude, or let it go even though you expected a more significant gift?",
-      "Would you rather travel overseas with friends while working remotely every night, or spend the entire trip taking care of a friend who got sick from the very beginning of the journey?",
-      "Would you prefer knowing if your partner had lived with their ex, or never finding out at all?",
-      "Would you rather have unlimited time but limited money, or unlimited money but limited time? (What would you prioritize?)",
-      "Would you rather always feel slightly hungry or slightly tired? (Which is easier to tolerate?)",
-      "Would you rather lose all your photos or all your saved messages on your phone? (What holds more sentimental value for you?)",
-      "Would you rather live in a world without music or without movies? (How would this change your life?)",
-      "Would you rather have the ability to pause time for 10 seconds whenever you want, or rewind time by 10 seconds once a day?"
+      "Do you usually have a lot of curiosity? What kinds of things spark your curiosity the most?",
+      "Can you share a time when your curiosity led to an unexpected discovery or experience? Was it worth the risk?",
+      "Some argue that curiosity is essential for innovation and progress, while others see it as a source of unnecessary trouble. What’s your opinion on this balance?",
+      "The full phrase includes 'but satisfaction brought it back.' How do you interpret this addition? Does it change how you view curiosity?",
+      "If curiosity were a person, what kind of personality would they have? How would they navigate risks and rewards in life?"
     ]
   },
-  "Session 2: Nostalgia Meets Modernity: The Retro Tech Revival 📸": {
-    "context": "In recent years, retro technology has made a surprising comeback among younger generations, particularly Gen Z. From old iPhones and digital cameras to Walkmans and vinyl records, these items are being embraced not just for their functionality but for the nostalgia and aesthetic they evoke. This trend, often referred to as 'youngtro,' reflects a desire to blend the charm of the past with the conveniences of the present. Let’s explore your thoughts and experiences with this fascinating cultural shift.",
+  "Session 2: From Doctor to Storyteller: Exploring Career Transitions in Creative Fields 🌟": {
+    "context": "The Netflix drama *The Trauma Code: Heroes on Call* has captivated audiences worldwide, not just for its gripping storyline but also for the inspiring journey of its creator, Lee Nak-jun. A former ENT specialist, Lee transitioned from practicing medicine to becoming a successful writer and YouTuber. His story highlights the challenges and rewards of career changes, especially when pivoting to creative fields. Let’s explore what we can learn from his journey and discuss our own thoughts and experiences with career transitions.",
     "questions": [
-      "What’s your favorite piece of retro technology, if any? Why do you think it appeals to you or others?",
-      "Have you ever used an older gadget like a vintage camera or flip phone? How did it compare to modern devices?",
-      "Why do you think younger generations are drawn to retro tech, even though modern technology is often more advanced?",
-      "Do you think nostalgia plays a significant role in shaping trends today? Can you share an example from your own life or observations?",
-      "If you could bring back any old gadget or trend from the past, what would it be and why?"
+      "Have you ever watched a drama or movie that focused on a specific profession, like doctors, lawyers, musicians, or engineers? What stood out to you about how that profession was portrayed?",
+      "Lee Nak-jun transitioned from being a doctor to a writer. Have you ever considered switching careers or pursuing a passion outside your current field? What inspired or held you back?",
+      "Lee used his medical background to create compelling stories. Do you think personal experiences or professional expertise make creative works more relatable? Why or why not?",
+      "Career changes often involve risks and uncertainties. What qualities do you think are necessary to successfully navigate such transitions? Can you share any examples from your life or someone you admire?",
+      "If you could write a story based on your own experiences or profession, what would it be about? How would you hope others would connect with it?"
     ]
   },
-  "Session 3: Education, Social Status, and Parental Expectations in Modern Society 🎓": {
-    "context": "In many societies, education is seen as a pathway to success, but in South Korea, it often becomes a defining aspect of family identity and social status. The recent viral parody of 'Daechi moms' highlighted the pressures parents face to secure the best opportunities for their children, as well as the role of luxury goods in projecting success. This session explores how education, societal expectations, and materialism intersect, encouraging you to reflect on your own experiences and perspectives.",
+  "Session 3: Virtual Idols: The Future of Entertainment? 🎭": {
+    "context": "Virtual idols are becoming a significant force in the entertainment industry, particularly in K-pop. Groups like PLAVE and Isegye Idol have achieved remarkable success, blending advanced technology with human creativity. While some see them as the next evolution in music and entertainment, others raise concerns about their lack of interactivity, ethical implications, and the potential for unrealistic beauty standards. This session invites you to explore this fascinating trend, share your thoughts on its impact, and discuss whether virtual idols are a fleeting trend or a lasting innovation.",
     "questions": [
-      "How do you think education shapes social status here in Seoul? Do you notice differences between neighborhoods or communities?",
-      "Have you ever felt pressure to meet societal expectations, either in education or other areas? How did you deal with it?",
-      "Why do you think some people use material goods, like luxury fashion, to express their identity or social standing? Do you think this is effective or problematic?",
-      "The parody video sparked both laughter and discomfort. Why do you think humor can be such a powerful way to critique societal norms? Can you share an example of satire that resonated with you?",
-      "If you were a parent in a highly competitive environment like Daechi-dong, how would you balance your child's academic success with their happiness and well-being?"
+      "Have you ever listened to music or watched performances by virtual idols like PLAVE? What was your first impression?",
+      "Virtual idols eliminate many challenges faced by human performers, such as privacy issues or aging. Do you think this gives them an unfair advantage over real-life artists?",
+      "Some people feel a lack of emotional connection with virtual idols due to their artificial nature. Do you agree? Why or why not?",
+      "What are your thoughts on the ethical concerns surrounding virtual idols, such as their potential for exploitation or perpetuating unrealistic standards?",
+      "If you could design your own virtual idol or group, what unique traits or concepts would you include to make them stand out?"
     ]
   }
 }
