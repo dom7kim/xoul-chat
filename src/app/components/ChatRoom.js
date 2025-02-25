@@ -194,6 +194,49 @@ Generated on ${new Date().toLocaleString()}
       .catch(err => console.error('Failed to copy: ', err));
   };
 
+  const handleEditMessage = (index, newContent) => {
+    // Create a new array with only messages up to the edited message
+    const editedMessage = { role: 'user', content: newContent };
+    const newMessages = [...messages.slice(0, index), editedMessage];
+    
+    setMessages(newMessages);
+    
+    // If this is the only message (after the initial assistant message),
+    // we don't need to send a request
+    if (newMessages.length <= 1) {
+      return;
+    }
+    
+    // Send the edited message to get a new response
+    setIsTyping(true);
+    
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        messages: newMessages,
+        selectedQuestion,
+        context: selectedSession ? questionData[selectedSession].context : ''
+      }),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.response) {
+          setTimeout(() => {
+            setIsTyping(false);
+            setMessages([...newMessages, { role: 'assistant', content: data.response }]);
+          }, 300 + Math.random() * 200);
+        } else {
+          console.error('Failed to get response:', data.error);
+          setIsTyping(false);
+        }
+      })
+      .catch(error => {
+        console.error('Error sending message:', error);
+        setIsTyping(false);
+      });
+  };
+
   return (
     <div className={`w-full flex flex-col ${
       darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'
@@ -301,7 +344,13 @@ Generated on ${new Date().toLocaleString()}
       </div>
       <div ref={chatContainerRef} className="flex flex-col flex-grow overflow-hidden">
         <div className="flex-grow overflow-y-auto">
-          <ChatMessages messages={messages} darkMode={darkMode} largeFont={largeFont} isTyping={isTyping} />
+          <ChatMessages 
+            messages={messages} 
+            darkMode={darkMode} 
+            largeFont={largeFont} 
+            isTyping={isTyping} 
+            onEditMessage={handleEditMessage}
+          />
         </div>
         <div className={`px-1 py-2 ${
           darkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-200'
