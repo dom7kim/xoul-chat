@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import PlayButton from './PlayButton';
-import { ChevronUp, ChevronDown } from 'lucide-react';
+import { ChevronUp, ChevronDown, Edit2 } from 'lucide-react';
 
-export default function ChatMessages({ messages, darkMode, largeFont, isTyping }) {
+export default function ChatMessages({ messages, darkMode, largeFont, isTyping, onEditMessage }) {
   const messagesEndRef = useRef(null);
   const [expandedFeedback, setExpandedFeedback] = useState({});
+  const [editingMessageIndex, setEditingMessageIndex] = useState(null);
+  const [editText, setEditText] = useState('');
+  const editInputRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -18,6 +21,12 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
     setExpandedFeedback({});
   }, [messages]);
 
+  useEffect(() => {
+    if (editingMessageIndex !== null && editInputRef.current) {
+      editInputRef.current.focus();
+    }
+  }, [editingMessageIndex]);
+
   const toggleFeedback = (index) => {
     setExpandedFeedback(prev => ({
       ...prev,
@@ -25,17 +34,103 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping }
     }));
   };
 
+  const startEditing = (index, content) => {
+    setEditingMessageIndex(index);
+    setEditText(content);
+  };
+
+  const cancelEditing = () => {
+    setEditingMessageIndex(null);
+    setEditText('');
+  };
+
+  const saveEdit = () => {
+    if (editText.trim() && editingMessageIndex !== null) {
+      onEditMessage(editingMessageIndex, editText);
+      setEditingMessageIndex(null);
+      setEditText('');
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      saveEdit();
+    } else if (e.key === 'Escape') {
+      cancelEditing();
+    }
+  };
+
   const renderMessage = (message, index) => {
     if (message.role === 'user') {
+      // If this message is being edited
+      if (editingMessageIndex === index) {
+        return (
+          <div key={index} className={`p-2 rounded-lg ${
+            darkMode ? 'bg-blue-900 ml-auto' : 'bg-blue-100 ml-auto'
+          } max-w-[90%] shadow`}>
+            <p className={`font-bold ${
+              darkMode ? 'text-blue-300' : 'text-blue-700'
+            }`}>
+              You:
+            </p>
+            <div className="mt-1">
+              <textarea
+                ref={editInputRef}
+                value={editText}
+                onChange={(e) => setEditText(e.target.value)}
+                onKeyDown={handleKeyDown}
+                className={`w-full px-2 py-1 rounded ${
+                  darkMode ? 'bg-blue-800 text-white' : 'bg-white text-gray-800'
+                } border ${
+                  darkMode ? 'border-blue-700' : 'border-blue-300'
+                } focus:outline-none focus:ring-1 focus:ring-blue-500`}
+                rows={Math.max(1, (editText.match(/\n/g) || []).length + 1)}
+              />
+              <div className="flex justify-end space-x-2 mt-1">
+                <button
+                  onClick={cancelEditing}
+                  className={`px-2 py-1 text-xs rounded ${
+                    darkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'
+                  }`}
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={saveEdit}
+                  className={`px-2 py-1 text-xs rounded ${
+                    darkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'
+                  } text-white`}
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      // Regular user message (not being edited)
       return (
         <div key={index} className={`p-2 rounded-lg ${
           darkMode ? 'bg-blue-900 ml-auto' : 'bg-blue-100 ml-auto'
-        } max-w-[90%] shadow`}>
-          <p className={`font-bold ${
-            darkMode ? 'text-blue-300' : 'text-blue-700'
-          }`}>
-            You:
-          </p>
+        } max-w-[90%] shadow group relative`}>
+          <div className="flex justify-between items-start">
+            <p className={`font-bold ${
+              darkMode ? 'text-blue-300' : 'text-blue-700'
+            }`}>
+              You:
+            </p>
+            <button
+              onClick={() => startEditing(index, message.content)}
+              className={`p-1 rounded ${
+                darkMode ? 'hover:bg-blue-800 text-blue-300' : 'hover:bg-blue-200 text-blue-700'
+              }`}
+              aria-label="Edit message"
+            >
+              <Edit2 size={14} />
+            </button>
+          </div>
           <p className={`${
             darkMode ? 'text-gray-300' : 'text-gray-700'
           } whitespace-pre-wrap`}>
