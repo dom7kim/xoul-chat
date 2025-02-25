@@ -8,6 +8,7 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping, 
   const [editingMessageIndex, setEditingMessageIndex] = useState(null);
   const [editText, setEditText] = useState('');
   const editInputRef = useRef(null);
+  const textareaRef = useRef(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -26,6 +27,13 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping, 
       editInputRef.current.focus();
     }
   }, [editingMessageIndex]);
+
+  useEffect(() => {
+    if (editingMessageIndex !== null && textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  }, [editingMessageIndex, editText]);
 
   const toggleFeedback = (index) => {
     setExpandedFeedback(prev => ({
@@ -76,16 +84,22 @@ export default function ChatMessages({ messages, darkMode, largeFont, isTyping, 
             </p>
             <div className="mt-1">
               <textarea
-                ref={editInputRef}
+                ref={(el) => {
+                  editInputRef.current = el;
+                  textareaRef.current = el;
+                }}
                 value={editText}
-                onChange={(e) => setEditText(e.target.value)}
+                onChange={(e) => {
+                  setEditText(e.target.value);
+                  e.target.style.height = 'auto';
+                  e.target.style.height = `${e.target.scrollHeight}px`;
+                }}
                 onKeyDown={handleKeyDown}
                 className={`w-full px-2 py-1 rounded ${
                   darkMode ? 'bg-blue-800 text-white' : 'bg-white text-gray-800'
                 } border ${
                   darkMode ? 'border-blue-700' : 'border-blue-300'
-                } focus:outline-none focus:ring-1 focus:ring-blue-500`}
-                rows={Math.max(1, (editText.match(/\n/g) || []).length + 1)}
+                } focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none overflow-hidden`}
               />
               <div className="flex justify-end space-x-2 mt-1">
                 <button
