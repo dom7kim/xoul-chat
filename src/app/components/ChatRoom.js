@@ -154,43 +154,53 @@ export default function ChatRoom({
   const copyConversation = () => {
     const topicTitle = selectedSession;
     const currentQuestion = selectedQuestion;
-    let conversationMarkdown = '';
+    let conversationText = '';
 
+    // Add header with emojis
+    conversationText += `✨ ${topicTitle} ✨\n\n`;
+    conversationText += `💬 Question: ${currentQuestion}\n\n`;
+    conversationText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+    let interactionCount = 0;
+    
     messages.forEach((msg, index) => {
+      // Start a new interaction when we encounter a user message (except the first one)
+      if (msg.role === 'user' && interactionCount > 0) {
+        conversationText += `┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n\n`;
+      }
+      
       if (msg.role === 'user') {
-        conversationMarkdown += `**You:** ${msg.content.trim()}\n\n`;
+        conversationText += `👤 You: ${msg.content.trim()}\n\n`;
+        interactionCount++;
       } else if (msg.role === 'assistant') {
-        const feedbackMatch = msg.content.match(/\[\[(.*?)\]\]/s);
-        const feedback = feedbackMatch ? feedbackMatch[1].trim() : '';
-        const content = msg.content.replace(/\[\[.*?\]\]/s, '').trim();
+        try {
+          const content = JSON.parse(msg.content);
+          const feedback = content.feedback;
+          const response = content.response;
 
-        // Skip the first assistant message if it's just repeating the question
-        if (index === 0 && content.includes(currentQuestion)) {
-          return;
+          // Skip the first assistant message if it's just repeating the question
+          if (index === 0 && response.includes(currentQuestion)) {
+            interactionCount = 0; // Reset counter since we're skipping this
+            return;
+          }
+
+          if (index > 0 && messages[index - 1].role === 'user' && feedback) {
+            conversationText += `🔍 Feedback: ${feedback}\n\n`;
+          }
+
+          conversationText += `👩‍🏫 Stephanie: ${response}\n\n`;
+        } catch (error) {
+          // Fallback for non-JSON responses
+          conversationText += `👩‍🏫 Stephanie: ${msg.content.trim()}\n\n`;
         }
-
-        if (index > 0 && messages[index - 1].role === 'user' && feedback) {
-          conversationMarkdown += `> **Feedback:** ${feedback}\n\n`;
-        }
-
-        conversationMarkdown += `**Stephanie:** ${content}\n\n`;
       }
     });
 
-    const markdownToCopy = `# ${topicTitle}
+    conversationText += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`;
+    conversationText += `📅 ${new Date().toLocaleString()}\n`;
 
-## Question
-${currentQuestion}
-
-## Conversation
-${conversationMarkdown.trim()}
-
----
-Generated on ${new Date().toLocaleString()}
-`;
-
-    navigator.clipboard.writeText(markdownToCopy)
-      .then(() => console.log('Conversation copied to clipboard in Markdown format'))
+    navigator.clipboard.writeText(conversationText)
+      .then(() => console.log('Conversation copied to clipboard in text format'))
       .catch(err => console.error('Failed to copy: ', err));
   };
 
