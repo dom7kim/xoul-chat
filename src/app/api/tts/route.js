@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const UNREAL_SPEECH_API_URL = 'https://api.v7.unrealspeech.com/speech';
+const UNREAL_SPEECH_API_URL = 'https://api.v8.unrealspeech.com/speech';
 const UNREAL_SPEECH_API_KEY = process.env.UNREAL_SPEECH_API_KEY;
 
 // Improved function to remove emojis from text
@@ -30,10 +30,10 @@ export async function POST(request) {
       },
       body: JSON.stringify({
         Text: filteredText,
-        VoiceId: 'Liv',
-        Bitrate: '192k',
+        VoiceId: 'Sierra',
+        Bitrate: '128k',
         Speed: '0',
-        Pitch: '1.03',
+        Pitch: '1.0',
         TimestampType: 'sentence'
       })
     });
